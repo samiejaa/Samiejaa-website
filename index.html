@@ -12,6 +12,8 @@
 <body>
   <header>
     <nav>
+        <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button> <!-- Hamburger icon -->
+        <div class="nav-content">
         <ul class="nav-left">
           <li><a href="game.html">GAME</a></li>
           <li><a href="music.html">MUSIC</a></li>
@@ -28,6 +30,7 @@
             <li><a href="collab.html">COLLAB</a></li>
             <li><a href="about.html">ABOUT</a></li>
           </ul>
+        </div>
       </nav>      
   </header>
 
@@ -62,6 +65,15 @@
     © 2025 SAMIEJAA. All rights reserved.
   </div>  
 
+  <script>
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const navContent = document.querySelector('.nav-content');
+  
+    toggleBtn.addEventListener('click', () => {
+      navContent.classList.toggle('active');
+    });
+  </script>
+  
   <script src="script.js"></script>
 </body>
 </html>
