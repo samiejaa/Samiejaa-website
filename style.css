@@ -9,19 +9,6 @@ body {
   main {
     margin-top: 5rem; /* Adjust as needed */
   }
-  
-/* Hide toggle by default (desktop) */
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: red;
-    position: absolute;
-    left: 1rem;
-    top: 1rem;
-    z-index: 1000;
-  }
 
  
 
