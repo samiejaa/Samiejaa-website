@@ -164,6 +164,20 @@ body {
     text-fill-color: transparent;
   }
   
+  .newest-song {
+    justify-content: center;
+    display: inline-block; 
+    margin-top: 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background: linear-gradient(15deg, red, rgb(100, 10, 10));
+    background-size: 100% auto; /* ensures gradient covers only the text */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* for Firefox */
+    text-fill-color: transparent;
+  }
+
   #mute-btn {
     position: fixed;
     bottom: 20px;
