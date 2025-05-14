@@ -10,7 +10,6 @@ body {
     margin-top: 5rem; /* Adjust as needed */
   }
 
- 
 
   /*Navigation line*/
   nav {
@@ -117,8 +116,7 @@ body {
   }
   
   .cta {
-    display: inline-block;
-    margin-top: 2rem;
+    margin-top: 0.5rem;
     padding: 1rem 2rem;
     background-color: red;
     color: white;
