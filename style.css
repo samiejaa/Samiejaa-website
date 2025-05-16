@@ -96,11 +96,25 @@ body {
     flex-direction: column;
     align-items: flex-start; /* aligns the text to the left under the image */
   } 
+
+  .album a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
   
   .album-covers img {
     max-width: 400px;
     border: 2px solid red;
+     border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
   }
+
+  /* Hover effect */
+.album a:hover img {
+  transform: scale(1.05);
+  cursor: pointer;
+}
 
   .Samiejaa-pics img {
     max-width: 400px;

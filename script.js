@@ -8,4 +8,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  const cover = document.getElementById('play-cover');
+  const audio = document.getElementById('cover-audio');
 
+  cover.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+      audio.currentTime = 0; // Reset for replay
+    }
+  });
