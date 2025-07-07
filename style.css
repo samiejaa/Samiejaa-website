@@ -10,6 +10,21 @@ body {
     margin-top: 5rem; /* Adjust as needed */
   }
 
+#search-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#search-input {
+  padding: 10px;
+  width: 80%;
+  max-width: 400px;
+  font-size: 1rem;
+  border: 2px solid red;
+  border-radius: 20px;
+  outline: none;
+}
+
 /* Hide checkbox */
 #menu-toggle {
   display: none;
@@ -101,15 +116,18 @@ body {
   
   .album-covers {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
     padding: 2rem;
   }
   
   .album {
+    flex: 0 1 300px;
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* aligns the text to the left under the image */
+     text-align: left;
   } 
 
   .album a {

@@ -19,3 +19,15 @@ document.addEventListener("DOMContentLoaded", function () {
       audio.currentTime = 0; // Reset for replay
     }
   });
+
+  const searchInput = document.getElementById('search-input');
+  const albums = document.querySelectorAll('.album');
+
+  searchInput.addEventListener('input', () => {
+    const searchTerm = searchInput.value.toLowerCase();
+
+    albums.forEach(album => {
+      const title = album.querySelector('.song-title').textContent.toLowerCase();
+      album.style.display = title.includes(searchTerm) ? 'block' : 'none';
+    });
+  });
