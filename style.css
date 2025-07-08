@@ -114,6 +114,94 @@ body {
     font-weight: 500;
   }
   
+.review-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  gap: 3rem;
+  flex-wrap: nowrap;
+}
+
+.review-image img {
+  max-width: 300px;
+  width: 100%;
+  border: 2px solid red;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.4);
+}
+
+.review-details {
+  max-width: 600px;
+  text-align: left;
+}
+
+.drink-title {
+  font-family: 'Underdog', cursive;
+  font-size: 2.5rem;
+  color: red;
+  margin-bottom: 0.5rem;
+}
+
+.star-rating {
+  font-size: 1.8rem;
+  color: gold;
+  margin-bottom: 1rem;
+}
+
+.review-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: white;
+}
+
+.suggested-section {
+  padding: 2rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.suggested-section h2 {
+  color: red;
+  font-family: 'Underdog', cursive;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.suggested-drinks {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.suggested-item {
+  width: 180px;
+  text-decoration: none;
+  color: white;
+}
+
+.suggested-item img {
+  width: 100%;
+  border: 2px solid red;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.suggested-item img:hover {
+  transform: scale(1.05);
+}
+
+.suggested-item p {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: red;
+  font-weight: bold;
+  font-family: 'Underdog', cursive;
+}
+
+
   .album-covers {
     display: flex;
     flex-wrap: wrap;
@@ -360,9 +448,20 @@ body {
     padding: 0.75rem 1.25rem;
   }
 
+  .review-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .review-details {
+    text-align: center;
+  }
+
   #menu-toggle {
     position: absolute;
     opacity: 0;
     pointer-events: none;
   }
 }
+
