@@ -6,6 +6,7 @@ body {
     text-align: center;
   }
 
+
   main {
     margin-top: 5rem; /* Adjust as needed */
   }
@@ -349,23 +350,58 @@ body {
   }
   
 
-
  /* RESPONSIVE STYLING FOR SMALL SCREENS */
 @media (max-width: 600px) {
   .hamburger {
     display: block;
-    font-size: 2rem;
+    position: absolute;
+    top: 1.5rem;
+    left: 1rem;
+    width: 30px;
+    height: 22px;
+    z-index: 4;
     cursor: pointer;
-    padding: 10px;
-    z-index: 3;
+  }
+  
+  .hamburger span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    margin-bottom: 6px;
+    background-color: red;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 5px red;
+  }
+  
+  /* Animate into an "X" */
+  #menu-toggle:checked + .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  #menu-toggle:checked + .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  #menu-toggle:checked + .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
   }
 
   .nav-content {
-    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: all 0.4s ease;
+  
+    /* 🔴 MAKE IT STAND OUT */
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.95); /* Optional: semi-transparent black */
+    backdrop-filter: blur(4px); /* Optional: blur behind */
+  
+    /* Layout (keep existing) */
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
-    background-color: black;
     position: absolute;
     top: 50px;
     left: 10px;
@@ -373,6 +409,13 @@ body {
     border-radius: 10px;
     z-index: 2;
     text-align: center;
+  }
+  
+  /* When menu is toggled */
+  #menu-toggle:checked ~ .hamburger + .nav-content {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
   }
 
   .nav-left,
@@ -388,13 +431,11 @@ body {
     display: flex;
   }
 
-  
 
   .logo {
     position: static;
     transform: none;
     order: -1;
-    margin-bottom: 1rem;
     text-align: center;
   }
  
@@ -433,7 +474,7 @@ body {
   .song-title {
     font-size: 1rem;
     margin-top: 0.5rem;
-  }½122
+  }
 
   main h1 {
     font-size: 1.5rem;
@@ -465,3 +506,15 @@ body {
   }
 }
 
+@keyframes menuGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.9);
+  }
+}
+
+#menu-toggle:checked ~ .hamburger + .nav-content {
+  animation: menuGlow 1.5s ease-in-out infinite;
+}
