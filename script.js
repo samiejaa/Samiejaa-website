@@ -31,3 +31,5 @@ document.addEventListener("DOMContentLoaded", function () {
       album.style.display = title.includes(searchTerm) ? 'block' : 'none';
     });
   });
+
+  

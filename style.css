@@ -307,6 +307,130 @@ body {
     text-fill-color: transparent;
   }
 
+  .album .cta {
+  align-self: center; /* Centers the button inside the flex column */
+}
+
+.player-text {
+  color: red;
+}
+
+.cassette-player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  padding: 1rem;
+  border: 2px solid red;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255,0,0,0.6);
+  width: 320px;
+  margin: 2rem auto;
+}
+
+.cassette {
+  position: relative;
+  width: 300px;
+  height: 150px;
+  background: linear-gradient(#111, #333);
+  border: 2px solid red;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.cassette-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.reel {
+  width: 60px;
+  height: 60px;
+  border: 4px solid red;
+  border-radius: 50%;
+  position: relative;
+}
+
+.reel::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background: red;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#visualizer {
+  background-color: black;
+  border: 1px solid red;
+  border-radius: 3px;
+}
+
+/* Progress slider - old browser friendly */
+#progressBar {
+  width: 120px;
+  -webkit-appearance: none;
+  background: transparent;
+}
+#progressBar::-webkit-slider-runnable-track {
+  height: 6px;
+  background: red;
+  border-radius: 3px;
+}
+#progressBar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 12px;
+  width: 12px;
+  background: white;
+  border-radius: 50%;
+  margin-top: -3px;
+}
+#progressBar::-moz-range-track {
+  height: 6px;
+  background: red;
+  border-radius: 3px;
+}
+#progressBar::-moz-range-thumb {
+  height: 12px;
+  width: 12px;
+  background: white;
+  border-radius: 50%;
+}
+
+/* Retro LED Counter */
+#trackCounter {
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: red;
+  background: black;
+  border: 1px solid red;
+  padding: 2px 6px;
+  border-radius: 3px;
+  box-shadow: inset 0 0 8px rgba(255,0,0,0.7);
+  letter-spacing: 2px;
+}
+
+#playPauseBtn {
+  font-size: 1.2rem;
+  background: red;
+  color: white;
+  border: none;
+  padding: 0.3rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#playPauseBtn:hover {
+  background: darkred;
+}
+
   #mute-btn {
     position: fixed;
     bottom: 20px;

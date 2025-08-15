@@ -75,11 +75,43 @@
     <p class="newest-song">NEWEST RELEASE:</p>
     <section class="album-covers">
         <div class="album">
-          <img src="assets/cover2.png" alt="Cover Art 2">
-          <p class="song-title">BORDERLINE (Ft. Redalwxzzz)</p>
+          <img src="assets/FADS.jpg" alt="Cover Art 2">
+          <p class="song-title">Femboys And Dirty Socks</p>
+          <a href="https://share.amuse.io/track/samiejaa-femboys-and-dirty-socks" class="cta" target="_blank">PRE-SAVE NOW</a>
+        </div>
+
+           <div class="album">
+          <img src="assets/ifuluvme.jpg" alt="Cover Art 2">
+          <p class="song-title">IF U LUV ME? - redalwxzzz, samiejaa</p>
+          <a href="https://share.amuse.io/track/samiejaa-femboys-and-dirty-socks" class="cta" target="_blank">PRE-SAVE NOW</a>
         </div>
       </section>
-      <a href="https://share.amuse.io/track/samiejaa-borderline" class="cta" target="_blank">LISTEN NOW</a>
+      
+<div class="cassette-player">
+  <div class="cassette">
+    <div class="reel left-reel"></div>
+
+    <div class="cassette-center">
+      <p class="player-text">Secret snippet:</p>
+      <canvas id="visualizer" width="120" height="40"></canvas>
+       
+      <!-- Option 1: Progress Slider -->
+      <input type="range" id="progressBar" value="0" min="0" max="100">
+
+      <!-- Option 2: Retro LED Counter -->
+      <div id="trackCounter">00:00</div>
+
+      <button id="playPauseBtn">▶</button>
+    </div>
+
+    <div class="reel right-reel"></div>
+  </div>
+
+  <audio id="song">
+    <source src="assets/snippet.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
   </main>
 
   <footer class="social-footer">
@@ -93,6 +125,110 @@
     © 2025 SAMIEJAA. All rights reserved.
   </div>  
 
+
+
+<script>
+const audio = document.getElementById('song');
+const canvas = document.getElementById('visualizer');
+const ctx = canvas.getContext('2d');
+const playPauseBtn = document.getElementById('playPauseBtn');
+const progressBar = document.getElementById('progressBar');
+const trackCounter = document.getElementById('trackCounter');
+const leftReel = document.querySelector('.left-reel');
+const rightReel = document.querySelector('.right-reel');
+
+let audioCtx, analyser, source, dataArray, bufferLength;
+let spinning = false;
+let initialized = false;
+
+function initAudio() {
+  if (!audioCtx) {
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    analyser = audioCtx.createAnalyser();
+    source = audioCtx.createMediaElementSource(audio);
+    source.connect(analyser);
+    analyser.connect(audioCtx.destination);
+
+    analyser.fftSize = 256;
+    bufferLength = analyser.frequencyBinCount;
+    dataArray = new Uint8Array(bufferLength);
+    initialized = true;
+  }
+}
+
+function draw() {
+  requestAnimationFrame(draw);
+  analyser.getByteFrequencyData(dataArray);
+
+  ctx.fillStyle = 'black';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  const barWidth = (canvas.width / bufferLength) * 2.5;
+  let x = 0;
+
+  for (let i = 0; i < bufferLength; i++) {
+    const barHeight = dataArray[i] / 5;
+    ctx.fillStyle = `rgb(${barHeight + 100},0,0)`;
+    ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
+    x += barWidth + 1;
+  }
+}
+
+function spinReels() {
+  if (!spinning) {
+    spinning = true;
+    leftReel.style.animation = 'spin 1s linear infinite';
+    rightReel.style.animation = 'spin 1s linear infinite';
+  }
+}
+
+function stopReels() {
+  spinning = false;
+  leftReel.style.animation = 'none';
+  rightReel.style.animation = 'none';
+}
+
+// Play/pause
+playPauseBtn.addEventListener('click', async () => {
+  if (!initialized) initAudio();
+  await audioCtx.resume();
+
+  if (audio.paused) {
+    await audio.play();
+    playPauseBtn.textContent = '⏸';
+    spinReels();
+    draw();
+  } else {
+    audio.pause();
+    playPauseBtn.textContent = '▶';
+    stopReels();
+  }
+});
+
+// Update both progress slider and counter
+audio.addEventListener('timeupdate', () => {
+  if (!isNaN(audio.duration)) {
+    progressBar.value = (audio.currentTime / audio.duration) * 100;
+    let minutes = Math.floor(audio.currentTime / 60).toString().padStart(2, '0');
+    let seconds = Math.floor(audio.currentTime % 60).toString().padStart(2, '0');
+    trackCounter.textContent = `${minutes}:${seconds}`;
+  }
+});
+
+// Seek in song
+progressBar.addEventListener('input', () => {
+  audio.currentTime = (progressBar.value / 100) * audio.duration;
+});
+
+// Reel spin animation
+const style = document.createElement('style');
+style.innerHTML = `
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}`;
+document.head.appendChild(style);
+</script>
 
   <script src="script.js"></script>
 </body>
