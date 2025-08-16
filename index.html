@@ -126,7 +126,6 @@
   </div>  
 
 
-
 <script>
 const audio = document.getElementById('song');
 const canvas = document.getElementById('visualizer');
@@ -228,8 +227,20 @@ style.innerHTML = `
   100% { transform: rotate(360deg); }
 }`;
 document.head.appendChild(style);
+
+document.addEventListener("DOMContentLoaded", function () {
+  const bgMusic = document.getElementById("bg-music");
+  const snippet = document.getElementById("song");
+  const muteBtn = document.getElementById("mute-btn");
+
+  muteBtn.addEventListener("click", () => {
+    const shouldMute = !bgMusic.muted || !snippet.muted;
+    bgMusic.muted = shouldMute;
+    snippet.muted = shouldMute;
+    muteBtn.textContent = shouldMute ? "🔇 Unmute" : "🔊 Mute";
+  });
+});
 </script>
 
-  <script src="script.js"></script>
 </body>
 </html>
