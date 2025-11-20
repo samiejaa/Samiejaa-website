@@ -570,6 +570,14 @@ body {
 
  /* RESPONSIVE STYLING FOR SMALL SCREENS */
 @media (max-width: 900px) {
+
+.video-wrapper {
+  position: relative;
+  width: 440px;
+  height: 250px;
+  margin: 0 auto;
+}
+
   .hamburger {
     display: block;
     position: absolute;
@@ -730,6 +738,8 @@ body {
     pointer-events: none;
   }
 }
+
+
 
 @keyframes menuGlow {
   0%, 100% {
