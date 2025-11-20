@@ -1,4 +1,5 @@
 body {
+  background-color: black;
   background: 
     linear-gradient(
       rgba(0, 0, 0, 0.75),   /* dark overlay */
@@ -48,6 +49,26 @@ body {
     justify-content: center;
     align-items: center;
   }
+
+
+.video-wrapper {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;    /* forces landscape */
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  border: 2px solid rgb(175, 0, 0);     /* red border like your style */
+  border-radius: 20px;       /* rounded corners */
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.596); /* optional glow */
+}
+
+
 
 /* Liquid glass stuff */
 @media (min-width: 901px) { 
