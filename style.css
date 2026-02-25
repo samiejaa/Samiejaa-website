@@ -332,6 +332,53 @@ body {
   cursor: pointer;
 }
 
+/* ===== MERCH SECTION ===== */
+
+.merch-item img {
+  max-width: 400px;
+  border: none; /* removes red border */
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6); /* soft shadow instead */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Same hover grow effect */
+.merch-item a:hover img {
+  transform: scale(1.05);
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.9);
+}
+
+.merch-title {
+  margin-top: 0.6rem;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: 'Underdog', cursive;
+  color: white;
+}
+
+.merch-price {
+  margin-top: 0.2rem;
+  font-size: 0.95rem;
+  color: red;
+  font-weight: bold;
+}
+
+.merch-item {
+  padding: 14px;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.35); /* subtle dark glass */
+  backdrop-filter: blur(4px); /* makes it feel premium */
+  transition: background 0.25s ease, transform 0.25s ease;
+    border: 1px solid rgba(255, 0, 0, 0.15);
+}
+
+.merch-item:hover {
+  transform: translateY(-5px);
+  background: rgba(0, 0, 0, 0.55);
+}
+
+
   .Samiejaa-pics img {
     max-width: 400px;
     max-height: 400px;
