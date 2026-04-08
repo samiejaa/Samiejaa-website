@@ -344,9 +344,8 @@ body {
 
 /* Same hover grow effect */
 .merch-item a:hover img {
-  transform: scale(1.05);
+  transform: scale(1.0);
   cursor: pointer;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.9);
 }
 
 .merch-title {
@@ -367,15 +366,15 @@ body {
 .merch-item {
   padding: 14px;
   border-radius: 16px;
-  background: rgba(0, 0, 0, 0.35); /* subtle dark glass */
-  backdrop-filter: blur(4px); /* makes it feel premium */
+  background: rgba(255, 255, 255, 0.08); /* subtle dark glass */
+  backdrop-filter: blur(18px) saturate(180%); /* makes it feel premium */
   transition: background 0.25s ease, transform 0.25s ease;
     border: 1px solid rgba(255, 0, 0, 0.15);
 }
 
 .merch-item:hover {
   transform: translateY(-5px);
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(202, 202, 202, 0.15);
 }
 
 
