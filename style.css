@@ -2,14 +2,15 @@ body {
   background-color: black;
   background: 
     linear-gradient(
-      rgba(0, 0, 0, 0.75),   /* dark overlay */
+      rgba(0, 0, 0, 0.75),
       rgba(0, 0, 0, 0.75)
     ),
     url("assets/cologne.png");  
   
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Will keep the background non moving */
+  background-attachment: fixed;
+  min-height: 100vh;
 
     color: white;
     font-family: 'Arial', sans-serif;
@@ -756,6 +757,13 @@ body {
  /* RESPONSIVE STYLING FOR SMALL SCREENS */
 @media (max-width: 900px) {
 
+  /* Fix background white flash and clipping on iOS/Android */
+  body {
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center top;
+  }
+
 .video-wrapper {
   position: relative;
   width: 440px;
@@ -815,12 +823,11 @@ body {
     pointer-events: none;
     transition: all 0.4s ease;
   
-    /* Glass style matching site theme */
-    background: rgba(10, 0, 0, 0.75);
+    background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(18px) saturate(180%);
     -webkit-backdrop-filter: blur(18px) saturate(180%);
-    border: 1px solid rgba(255, 0, 0, 0.3);
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4), inset 0 0 0 1px rgba(255,255,255,0.04);
+    border: 1px solid rgba(255, 0, 0, 0.4);
+    box-shadow: 0 4px 14px rgba(255, 0, 0, 0.3);
   
     /* Layout */
     flex-direction: column;
@@ -830,7 +837,7 @@ body {
     left: 10px;
     padding: 14px 20px;
     border-radius: 14px;
-    z-index: 2;
+    z-index: 100;
     text-align: center;
   }
   
@@ -839,6 +846,7 @@ body {
     opacity: 1;
     transform: translateY(0) scale(1);
     pointer-events: auto;
+    animation: menuGlow 1.5s ease-in-out infinite;
   }
 
   .nav-left,
@@ -850,11 +858,7 @@ body {
     position: static;
   }
 
-  #menu-toggle:checked ~ .nav-content {
-    display: flex;
-  }
 
- 
   nav {
     top: -5rem;
     flex-direction: column;
@@ -924,18 +928,17 @@ body {
     opacity: 0;
     pointer-events: none;
   }
-}
 
-
-
-@keyframes menuGlow {
-  0%, 100% {
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
-  }
-  50% {
-    box-shadow: 0 0 25px rgba(255, 0, 0, 0.9);
+  @keyframes menuGlow {
+    0%, 100% {
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 22px rgba(255, 0, 0, 0.8);
+    }
   }
 }
+
 
 
 /* ===== DISCOGRAPHY SCROLL SECTION ===== */

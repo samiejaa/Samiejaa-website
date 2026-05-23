@@ -220,6 +220,34 @@
         </div>
       </section>
 
+      <section class="discography-section">
+        <div class="discography-header">
+          <a href="merch.html" class="disc-label">MERCH &amp; SHOP →</a>
+          <div class="disc-arrows">
+            <button class="disc-arrow" id="scrollMerchLeft">&#8592;</button>
+            <button class="disc-arrow" id="scrollMerchRight">&#8594;</button>
+          </div>
+        </div>
+
+        <div class="disc-scroll-track" id="merchScroll">
+
+          <div class="disc-item">
+            <img src="assets/Samie CD.png" alt="Samiejaa CD">
+            <p class="disc-title">Best Vol. 1 CD</p>
+            <p class="disc-feat">$12.90</p>
+            <a href="https://elasticstage.com/samiejaasstore/releases/samiejaas-best-vol-1-album" class="disc-listen" target="_blank">SHOP</a>
+          </div>
+
+          <div class="disc-item">
+            <img src="assets/Samie Vinyl.png" alt="Samiejaa Vinyl">
+            <p class="disc-title">Best Vol. 1 Vinyl</p>
+            <p class="disc-feat">$31.90</p>
+            <a href="https://elasticstage.com/samiejaasstore/releases/samiejaas-best-vol-1-album" class="disc-listen" target="_blank">SHOP</a>
+          </div>
+
+        </div>
+      </section>
+
 <div class="cassette-player">
   <div class="cassette">
     <div class="reel left-reel"></div>
@@ -392,6 +420,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   document.getElementById('scrollRight').addEventListener('click', () => {
     track.scrollBy({ left: 220, behavior: 'smooth' });
+  });
+
+  const merchTrack = document.getElementById('merchScroll');
+  document.getElementById('scrollMerchLeft').addEventListener('click', () => {
+    merchTrack.scrollBy({ left: -220, behavior: 'smooth' });
+  });
+  document.getElementById('scrollMerchRight').addEventListener('click', () => {
+    merchTrack.scrollBy({ left: 220, behavior: 'smooth' });
   });
 </script>
 
