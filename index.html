@@ -26,6 +26,12 @@
   </script>
 
   <link rel="icon" href="assets/favicon.png" type="image/png" />
+
+  <!-- Speed up the connection to external domains before we actually need them -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
   <link href="https://fonts.googleapis.com/css2?family=Underdog&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
@@ -33,13 +39,13 @@
 <body>
 
   <div id="loading-screen">
-  <img src="assets/logo.png" alt="Loading..." />
+  <img decoding="async" src="assets/logo.png" alt="Loading..." />
 </div>
 
   <header>
     <div class="logo">
           <a href="index.html">
-            <img src="assets/logo.png" alt="Samiejaa Logo">
+            <img decoding="async" src="assets/logo.png" alt="Samiejaa Logo">
           </a>
         </div> 
     <nav>
@@ -67,7 +73,7 @@
       </nav>      
   </header>
 
-  <audio id="bg-music" autoplay>
+  <audio id="bg-music" preload="none">
     <source src="assets/prodtag.MP3" type="audio/mpeg">
   </audio>
 
@@ -81,13 +87,13 @@
     <section class="album-covers">
 
         <div class="album">
-          <img src="assets/drunkenexperience.jpg" alt="Cover Art 2">
+          <img loading="lazy" decoding="async" src="assets/drunkenexperience.webp" alt="Cover Art 2">
           <p class="song-title">Drunken Experience</p>
           <a href="https://share.amuse.io/track/samiejaa-drunken-experience" class="cta" target="_blank">LISTEN NOW</a>
         </div>
 
           <div class="album">
-          <img src="assets/withoutyou.png" alt="Cover Art 2">
+          <img loading="lazy" decoding="async" src="assets/withoutyou.png" alt="Cover Art 2">
           <p class="song-title">Without You (Ft. MC Spermalot)</p>
           <a href="https://share.amuse.io/track/samiejaa-without-you" class="cta" target="_blank">LISTEN NOW</a>
         </div>
@@ -106,119 +112,119 @@
         <div class="disc-scroll-track" id="discScroll">
 
           <div class="disc-item">
-            <img src="assets/love -consev.png" alt="Love -consev">
+            <img loading="lazy" decoding="async" src="assets/love -consev.png" alt="Love -consev">
             <p class="disc-title">Love (From M.I.A)</p>
             <p class="disc-feat">consev Ft. Samiejaa</p>
             <a href="https://open.spotify.com/track/2iR2Jt3XSUOTPffe0cRiKA?" class="disc-listen" target="_blank">LISTEN</a>
           </div>
 
           <div class="disc-item">
-            <img src="assets/drunkenexperience.jpg" alt="Drunken Experience">
+            <img loading="lazy" decoding="async" src="assets/drunkenexperience.webp" alt="Drunken Experience">
             <p class="disc-title">Drunken Experience</p>
             <p class="disc-feat">&nbsp;</p>
             <a href="https://share.amuse.io/track/samiejaa-drunken-experience" class="disc-listen" target="_blank">LISTEN</a>
           </div>
 
           <div class="disc-item">
-            <img src="assets/withoutyou.png" alt="Without You">
+            <img loading="lazy" decoding="async" src="assets/withoutyou.png" alt="Without You">
             <p class="disc-title">Without You</p>
             <p class="disc-feat">Ft. MC Spermalot</p>
             <a href="https://share.amuse.io/track/samiejaa-without-you" class="disc-listen" target="_blank">LISTEN</a>
           </div>
 
           <div class="disc-item">
-            <img src="assets/shakethatass.png" alt="Shake That Ass">
+            <img loading="lazy" decoding="async" src="assets/shakethatass.png" alt="Shake That Ass">
             <p class="disc-title">Shake That Ass</p>
             <p class="disc-feat">&nbsp;</p>
             <a href="https://share.amuse.io/track/samiejaa-shake-that-ass" class="disc-listen" target="_blank">LISTEN</a>
           </div>
 
           <div class="disc-item">
-            <img src="assets/numberone.jpg" alt="Number One">
+            <img loading="lazy" decoding="async" src="assets/numberone.jpg" alt="Number One">
             <p class="disc-title">Number One</p>
             <p class="disc-feat">&nbsp;</p>
             <a href="https://share.amuse.io/track/samiejaa-number-one" class="disc-listen" target="_blank">LISTEN</a>
           </div>
 
           <div class="disc-item">
-            <img src="assets/dead2u.png" alt="dead2u">
+            <img loading="lazy" decoding="async" src="assets/dead2u.png" alt="dead2u">
             <p class="disc-title">dead2u</p>
             <p class="disc-feat">Myron Blueboy Ft. Samiejaa</p>
             <a href="https://open.spotify.com/track/2pb5AOvPd3xITt4gDSQNP0?" class="disc-listen" target="_blank">LISTEN</a>
           </div>
 
           <div class="disc-item">
-            <img src="assets/secretlittledancer.jpg" alt="Secret Little Dancer">
+            <img loading="lazy" decoding="async" src="assets/secretlittledancer.jpg" alt="Secret Little Dancer">
             <p class="disc-title">Secret Little Dancer</p>
             <p class="disc-feat">&nbsp;</p>
             <a href="https://share.amuse.io/track/samiejaa-secret-little-dancer" class="disc-listen" target="_blank">LISTEN</a>
           </div>
 
           <div class="disc-item">
-            <img src="assets/battlepass.png" alt="Battle Pass">
+            <img loading="lazy" decoding="async" src="assets/battlepass.png" alt="Battle Pass">
             <p class="disc-title">Battle Pass</p>
             <p class="disc-feat">Ft. MC Spermalot</p>
             <a href="https://soundcloud.com/samiejaamusic/battle-pass-wmc-spermalot-prod-tekilla" class="disc-listen" target="_blank">LISTEN</a>
           </div>
 
           <div class="disc-item">
-            <img src="assets/goodbye.jpg" alt="Goodbye">
+            <img loading="lazy" decoding="async" src="assets/goodbye.jpg" alt="Goodbye">
             <p class="disc-title">Goodbye</p>
             <p class="disc-feat">myroblue & Samiejaa</p>
             <a href="https://share.amuse.io/track/samiejaa-goodbye" class="disc-listen" target="_blank">LISTEN</a>
           </div>
 
           <div class="disc-item">
-            <img src="assets/thefallofanation.jpg" alt="The Fall Of A Nation">
+            <img loading="lazy" decoding="async" src="assets/thefallofanation.jpg" alt="The Fall Of A Nation">
             <p class="disc-title">The Fall Of A Nation</p>
             <p class="disc-feat">&nbsp;</p>
             <a href="https://share.amuse.io/track/samiejaa-the-fall-of-a-nation" class="disc-listen" target="_blank">LISTEN</a>
           </div>
 
           <div class="disc-item">
-            <img src="assets/yearnforyou.jpg" alt="Yearn For You">
+            <img loading="lazy" decoding="async" src="assets/yearnforyou.webp" alt="Yearn For You">
             <p class="disc-title">Yearn For You</p>
             <p class="disc-feat">&nbsp;</p>
             <a href="https://share.amuse.io/track/samiejaa-yearn-for-you" class="disc-listen" target="_blank">LISTEN</a>
           </div>
 
           <div class="disc-item">
-            <img src="assets/forgetit.jpg" alt="FORGET IT!">
+            <img loading="lazy" decoding="async" src="assets/forgetit.jpg" alt="FORGET IT!">
             <p class="disc-title">FORGET IT!</p>
             <p class="disc-feat">&nbsp;</p>
             <a href="https://share.amuse.io/track/samiejaa-forget-it-1" class="disc-listen" target="_blank">LISTEN</a>
           </div>
 
           <div class="disc-item">
-            <img src="assets/lamiadroga.png" alt="LA MIA DROGA">
+            <img loading="lazy" decoding="async" src="assets/lamiadroga.png" alt="LA MIA DROGA">
             <p class="disc-title">LA MIA DROGA</p>
             <p class="disc-feat">Ft. AfterDRK</p>
             <a href="https://share.amuse.io/track/samiejaa-la-mia-droga" class="disc-listen" target="_blank">LISTEN</a>
           </div>
 
           <div class="disc-item">
-            <img src="assets/ifuluvme.jpg" alt="IF U LUV ME?">
+            <img loading="lazy" decoding="async" src="assets/ifuluvme.jpg" alt="IF U LUV ME?">
             <p class="disc-title">IF U LUV ME?</p>
             <p class="disc-feat">Redalwxzzz & Samiejaa</p>
             <a href="https://share.amuse.io/track/redalwxzzz-if-u-luv-me" class="disc-listen" target="_blank">LISTEN</a>
           </div>
 
           <div class="disc-item">
-            <img src="assets/FADS.jpg" alt="FEMBOYS AND DIRTY SOCKS">
+            <img loading="lazy" decoding="async" src="assets/FADS.jpg" alt="FEMBOYS AND DIRTY SOCKS">
             <p class="disc-title">FEMBOYS AND DIRTY SOCKS</p>
             <p class="disc-feat">&nbsp;</p>
             <a href="https://share.amuse.io/track/samiejaa-femboys-and-dirty-socks" class="disc-listen" target="_blank">LISTEN</a>
           </div>
 
           <div class="disc-item">
-            <img src="assets/cover2.png" alt="BORDERLINE">
+            <img loading="lazy" decoding="async" src="assets/cover2.png" alt="BORDERLINE">
             <p class="disc-title">BORDERLINE</p>
             <p class="disc-feat">Samiejaa & Redalwxzzz</p>
             <a href="https://share.amuse.io/track/samiejaa-borderline" class="disc-listen" target="_blank">LISTEN</a>
           </div>
 
           <div class="disc-item">
-            <img src="assets/cover1.png" alt="WEEPING SHADOWS">
+            <img loading="lazy" decoding="async" src="assets/cover1.png" alt="WEEPING SHADOWS">
             <p class="disc-title">WEEPING SHADOWS</p>
             <p class="disc-feat">&nbsp;</p>
             <a href="https://share.amuse.io/track/samiejaa-music-weeping-shadows" class="disc-listen" target="_blank">LISTEN</a>
@@ -239,14 +245,14 @@
         <div class="disc-scroll-track" id="merchScroll">
 
           <div class="disc-item">
-            <img src="assets/Samie CD.png" alt="Samiejaa CD">
+            <img loading="lazy" decoding="async" src="assets/Samie CD.png" alt="Samiejaa CD">
             <p class="disc-title">Best Vol. 1 CD</p>
             <p class="disc-feat">$12.90</p>
             <a href="https://elasticstage.com/samiejaasstore/releases/samiejaas-best-vol-1-album" class="disc-listen" target="_blank">SHOP</a>
           </div>
 
           <div class="disc-item">
-            <img src="assets/Samie Vinyl.png" alt="Samiejaa Vinyl">
+            <img loading="lazy" decoding="async" src="assets/Samie Vinyl.png" alt="Samiejaa Vinyl">
             <p class="disc-title">Best Vol. 1 Vinyl</p>
             <p class="disc-feat">$31.90</p>
             <a href="https://elasticstage.com/samiejaasstore/releases/samiejaas-best-vol-1-album" class="disc-listen" target="_blank">SHOP</a>
@@ -275,7 +281,7 @@
     <div class="reel right-reel"></div>
   </div>
 
-  <audio id="song">
+  <audio id="song" preload="none">
     <source src="assets/snippet.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
@@ -283,7 +289,7 @@
   </main>
 
   <footer class="social-footer">
-    <a href="https://www.tiktok.com/@samiejaa4life" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://www.tiktok.com/@samiejaa.makesmusic" target="_blank"><i class="fab fa-tiktok"></i></a>
     <a href="https://www.instagram.com/samiejaa.makesmusic" target="_blank"><i class="fab fa-instagram"></i></a>
     <a href="https://www.youtube.com/@samiejaa" target="_blank"><i class="fab fa-youtube"></i></a>
     <a href="https://open.spotify.com/artist/6hWIpKW9JVwSA25vYeVZKI" target="_blank"><i class="fab fa-spotify"></i></a>
@@ -413,11 +419,16 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 <script>
-  window.addEventListener("load", function () {
+  function hideLoader() {
     const loader = document.getElementById("loading-screen");
+    if (!loader) return;
     loader.style.opacity = "0";
     setTimeout(() => loader.style.display = "none", 800);
-  });
+  }
+  window.addEventListener("load", hideLoader);
+  // Safety net: never let the loader block the page for more than 2.5s,
+  // even if a slow asset (audio, font, etc.) hasn't finished yet.
+  setTimeout(hideLoader, 2500);
 </script>
 
 <script>
