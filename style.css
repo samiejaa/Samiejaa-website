@@ -1116,6 +1116,29 @@ body {
   animation-delay: -4s;
 }
 
+.disc-fade-images {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(180, 0, 0, 0.45);
+}
+
+.disc-fade-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: crossfade 8s infinite;
+}
+
+.disc-fade-img-2 {
+  animation-delay: -4s;
+}
+
 @keyframes crossfade {
   0%, 45%  { opacity: 1; }
   50%, 95% { opacity: 0; }
