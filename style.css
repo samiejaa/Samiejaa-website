@@ -1147,3 +1147,261 @@ body {
   50%, 95% { opacity: 0; }
   100%     { opacity: 1; }
 }
+/* Product photos with transparent backgrounds (merch cut-outs):
+   no square glow, soft shadow that follows the product shape instead */
+.disc-item img.cutout,
+.disc-fade-images.cutout {
+  box-shadow: none;
+  border-radius: 0;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.5));
+}
+.disc-fade-images.cutout { filter: none; }
+
+/* ===== MERCH PAGE: search, filters and collections ===== */
+:root {
+  --merch-accent: #ff1a1a;
+  --merch-accent-ink: #fff;
+}
+
+.merch-filters,
+.merch-status,
+.merch-group {
+  width: min(1120px, 94%);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.merch-filters {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  gap: 1rem 1.5rem;
+  align-items: end;
+  margin-top: 1.5rem;
+  padding: 1rem 1.1rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(14px);
+}
+
+.merch-filter-label {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-family: 'Underdog', cursive;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.merch-search { position: relative; }
+.merch-search i {
+  position: absolute;
+  left: 0.85rem;
+  bottom: 0.85rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.55);
+  pointer-events: none;
+}
+.merch-search input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.7rem 0.9rem 0.7rem 2.4rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  font-family: 'Underdog', cursive;
+  font-size: 1rem;
+}
+.merch-search input::placeholder { color: rgba(255, 255, 255, 0.4); }
+.merch-search input:focus {
+  outline: 2px solid var(--merch-accent);
+  outline-offset: 1px;
+  border-color: transparent;
+}
+
+.merch-seg {
+  display: inline-flex;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.merch-seg button {
+  padding: 0.65rem 0.95rem;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-family: 'Underdog', cursive;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.merch-seg button + button { border-left: 1px solid rgba(255, 255, 255, 0.18); }
+.merch-seg button:hover { background: rgba(255, 255, 255, 0.08); }
+.merch-seg button[aria-pressed="true"] {
+  background: var(--merch-accent);
+  color: var(--merch-accent-ink);
+}
+.merch-seg button:focus-visible { outline: 2px solid #fff; outline-offset: -3px; }
+
+main .merch-status {
+  margin-top: 0.7rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.merch-group { margin-top: 2rem; }
+.merch-group[hidden], .merch-item[hidden], .merch-empty[hidden] { display: none !important; }
+
+.merch-group-title {
+  margin: 0 0 1rem 0.2rem;
+  font-family: 'Underdog', cursive;
+  font-weight: 400;
+  font-size: 1.1rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.merch-shop {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.merch-shop .merch-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 14px 14px 18px;
+}
+
+.merch-media {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+.merch-shop .merch-item img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.merch-shop .merch-item img.cutout {
+  object-fit: contain;
+  border-radius: 0;
+  box-shadow: none;
+  filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.5));
+}
+
+main .merch-type {
+  margin: 0.8rem 0 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+.merch-shop .merch-title {
+  margin: 0.25rem 0 0;
+  font-size: 1.05rem;
+  line-height: 1.25;
+}
+.merch-shop .merch-price { margin: 0.3rem 0 0.9rem; }
+.merch-shop .disc-listen { margin-top: auto; }
+
+.merch-empty {
+  margin: 3rem auto;
+  text-align: center;
+}
+.merch-empty .disc-listen { border: 0; cursor: pointer; font-family: inherit; }
+
+@media (max-width: 860px) {
+  .merch-filters { grid-template-columns: 1fr; }
+  .merch-seg { display: flex; }
+  .merch-seg button { flex: 1; padding: 0.65rem 0.4rem; }
+  .merch-shop { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.8rem; }
+  .merch-shop .merch-title { font-size: 0.95rem; }
+}
+
+/* ===== MUSIC PAGE: featured album + song cards (uses the merch filter styles above) ===== */
+.music-feature {
+  box-sizing: border-box;
+  width: min(1120px, 94%);
+  margin: 1.5rem auto 0;
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+  gap: 1.6rem;
+  align-items: center;
+  padding: 1.1rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(14px);
+  text-align: left;
+}
+.music-feature img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+main .music-feature-kicker {
+  margin: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--merch-accent);
+}
+.music-feature-title {
+  margin: 0.3rem 0 0.4rem;
+  font-family: 'Underdog', cursive;
+  font-weight: 400;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.05;
+  color: #fff;
+}
+main .music-feature-text { margin: 0; color: rgba(255, 255, 255, 0.75); }
+.music-feature-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.1rem;
+}
+.music-feature-actions .cta { margin-top: 0; padding: 0.8rem 1.6rem; display: inline-block; }
+.music-outline {
+  display: inline-block;
+  padding: 0.75rem 1.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.music-outline:hover { border-color: var(--merch-accent); background: rgba(255, 255, 255, 0.06); }
+
+main .song-credit {
+  margin: 0.25rem 0 0.9rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 860px) {
+  .music-feature { grid-template-columns: 1fr; text-align: center; justify-items: center; }
+  .music-feature img { max-width: 260px; }
+  .music-feature-actions { justify-content: center; }
+  .merch-seg button { white-space: normal; line-height: 1.2; }
+}

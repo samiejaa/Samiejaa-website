@@ -180,3 +180,6 @@ html .disc-fade-images { box-shadow: 0 4px 14px rgba(0, 110, 170, 0.45); }
 html .disc-feat { color: var(--dod-steel); -webkit-text-fill-color: var(--dod-steel); }
 html .disc-listen { background: var(--dod-cyan); color: var(--dod-bg); }
 html .disc-listen:hover { background: var(--dod-deep); color: white; }
+
+/* ---------- Merch page filters ---------- */
+html:root { --merch-accent: var(--dod-cyan); --merch-accent-ink: var(--dod-bg); }

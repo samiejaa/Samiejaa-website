@@ -328,3 +328,7 @@
   .dod-ticker { margin: 0 -0.7rem; }
   .dod-lbl { font-size: 0.7rem; }
 }
+
+/* Collection title links to the filtered merch page */
+.dod-shelf-title a { color: inherit; text-decoration: none; transition: color 0.2s ease; }
+.dod-shelf-title a:hover { color: var(--h-cyan); }

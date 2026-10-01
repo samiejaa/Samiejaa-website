@@ -4,7 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SAMIEJAA – Merch</title>
-  <link rel="icon" href="assets/favicon.png" type="image/png" />
+  <meta name="description" content="Official Samiejaa merch: hoodies, t-shirts, beanies, CDs and vinyl, including the Diary of Desire collection." />
+  <link rel="icon" href="assets/favicon-dod.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Underdog&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
@@ -12,14 +15,13 @@
 <body>
 
   <div id="loading-screen">
-  <img src="assets/logo.png" alt="Loading..." />
-
+  <img decoding="async" src="assets/logo.png" alt="Loading..." />
 </div>
 
   <header>
         <div class="logo">
           <a href="index.html">
-            <img src="assets/logo.png" alt="Samiejaa Logo">
+            <img decoding="async" src="assets/logo.png" alt="Samiejaa Logo">
           </a>
         </div>        
 
@@ -52,80 +54,237 @@
   <h1>OFFICIAL STORE</h1>
   <p>Support the movement.</p>
 
-  <section class="album-covers merch-grid">
-
-<div class="album merch-item">
-  <a href="https://store.samiejaa.com/products/samiejaas-graveyard" target="_blank">
-    <div class="fade-images">
-      <img src="assets/Graveyard hoodie.jpg" alt="Graveyard Hoodie" class="fade-img fade-img-1">
-      <img src="assets/Graveyard back.jpg" alt="Graveyard Hoodie Back" class="fade-img fade-img-2">
+  <!-- ===== Filters: edit the data-category / data-collection on each item below to sort it ===== -->
+  <form class="merch-filters" role="search" onsubmit="return false">
+    <div class="merch-search">
+      <label class="merch-filter-label" for="merch-q">Search</label>
+      <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+      <input id="merch-q" type="search" placeholder="Hoodie, vinyl, beanie..." autocomplete="off">
     </div>
-  </a>
-
-  <p class="merch-title">Samiejaa's Graveyard Hoodie</p>
-  <p class="merch-price">$37.23</p>
-</div>
-
-    <div class="album merch-item">
-      <a href="https://store.samiejaa.com/products/samiejaas-meanie-beanie" target="_blank">
-        <img src="assets/Meanie Beanie.jpg" alt="Meanie Beanie">
-      </a>
-
-      <p class="merch-title">Samiejaa's Meanie Beanie</p>
-      <p class="merch-price">$16.79</p>
+    <div>
+      <span class="merch-filter-label" id="lbl-type">Type</span>
+      <div class="merch-seg" role="group" aria-labelledby="lbl-type" data-filter="category">
+        <button type="button" data-value="all" aria-pressed="true">All</button>
+        <button type="button" data-value="music" aria-pressed="false">Music</button>
+        <button type="button" data-value="apparel" aria-pressed="false">Apparel</button>
+      </div>
     </div>
-
-    <div class="album merch-item">
-      <a href="https://store.samiejaa.com/products/samiejaas-meanie-beanie-pro" target="_blank">
-        <img src="assets/Meanie beanie pro.jpg" alt="Meanie Beanie Pro">
-      </a>
-
-      <p class="merch-title">Samiejaa's Meanie Beanie PRO</p>
-      <p class="merch-price">$21.59</p>
+    <div>
+      <span class="merch-filter-label" id="lbl-col">Collection</span>
+      <div class="merch-seg" role="group" aria-labelledby="lbl-col" data-filter="collection">
+        <button type="button" data-value="all" aria-pressed="true">All</button>
+        <button type="button" data-value="dod" aria-pressed="false">Diary of Desire</button>
+        <button type="button" data-value="originals" aria-pressed="false">Originals</button>
+      </div>
     </div>
+  </form>
+  <p class="merch-status" id="merch-status" aria-live="polite"></p>
 
-    <div class="album merch-item">
-      <a href="https://elasticstage.com/samiejaasstore/releases/samiejaas-best-vol-1-album" target="_blank">
-        <img src="assets/Samie CD.jpg" alt="Samiejaa CD">
-      </a>
-
-      <p class="merch-title">Samiejaa's Best Vol. 1 CD</p>
-      <p class="merch-price">$12.90</p>
+  <!-- ===== THE DIARY OF DESIRE COLLECTION ===== -->
+  <section class="merch-group" data-group="dod" aria-labelledby="g-dod">
+    <h2 class="merch-group-title" id="g-dod">The Diary of Desire Collection</h2>
+    <div class="merch-shop">
+      <article class="merch-item" data-category="music" data-collection="dod" data-search="diary of desire vinyl vinyl vinyl record lp album physical">
+        <a class="merch-media" href="https://elasticstage.com/samiejaasstore/releases/diary-of-desire-album" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img loading="lazy" decoding="async" src="assets/dod-vinyl.webp" alt="Diary of Desire Vinyl" class="cutout">
+        </a>
+        <p class="merch-type">Vinyl</p>
+        <h3 class="merch-title">Diary of Desire Vinyl</h3>
+        <p class="merch-price">$31.90</p>
+        <a class="disc-listen" href="https://elasticstage.com/samiejaasstore/releases/diary-of-desire-album" target="_blank" rel="noopener" aria-label="Pre-order Diary of Desire Vinyl"><span data-dod-label="soon">PRE-ORDER</span><span data-dod-label="live" hidden>ORDER</span></a>
+      </article>
+      <article class="merch-item" data-category="music" data-collection="dod" data-search="diary of desire cd cd cd disc album physical">
+        <a class="merch-media" href="https://elasticstage.com/samiejaasstore/releases/diary-of-desire-album" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img loading="lazy" decoding="async" src="assets/dod-cd.webp" alt="Diary of Desire CD" class="cutout">
+        </a>
+        <p class="merch-type">CD</p>
+        <h3 class="merch-title">Diary of Desire CD</h3>
+        <p class="merch-price">$12.90</p>
+        <a class="disc-listen" href="https://elasticstage.com/samiejaasstore/releases/diary-of-desire-album" target="_blank" rel="noopener" aria-label="Pre-order Diary of Desire CD"><span data-dod-label="soon">PRE-ORDER</span><span data-dod-label="live" hidden>ORDER</span></a>
+      </article>
+      <article class="merch-item" data-category="apparel" data-collection="dod" data-search="diary of desire debut hoodie hoodie hoodie sweater sweatshirt album cover logo">
+        <a class="merch-media" href="https://store.samiejaa.com/products/diary-of-desire-debute-hoodie" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img loading="lazy" decoding="async" src="assets/dod-debut-hoodie-front.webp" alt="Diary of Desire Debut Hoodie, front" class="fade-img fade-img-1 cutout">
+          <img loading="lazy" decoding="async" src="assets/dod-debut-hoodie-back.webp" alt="Diary of Desire Debut Hoodie, back" class="fade-img fade-img-2 cutout">
+        </a>
+        <p class="merch-type">Hoodie</p>
+        <h3 class="merch-title">Diary of Desire Debut Hoodie</h3>
+        <p class="merch-price">$36.24</p>
+        <a class="disc-listen" href="https://store.samiejaa.com/products/diary-of-desire-debute-hoodie" target="_blank" rel="noopener" aria-label="Shop Diary of Desire Debut Hoodie">SHOP</a>
+      </article>
+      <article class="merch-item" data-category="apparel" data-collection="dod" data-search="minimalistic debut hoodie hoodie hoodie sweater sweatshirt departure board minimal">
+        <a class="merch-media" href="https://store.samiejaa.com/products/diary-of-desire-minimalistic-debute-hoodie" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img loading="lazy" decoding="async" src="assets/dod-minimal-hoodie-front.webp" alt="Minimalistic Debut Hoodie, front" class="fade-img fade-img-1 cutout">
+          <img loading="lazy" decoding="async" src="assets/dod-minimal-hoodie-back.webp" alt="Minimalistic Debut Hoodie, back" class="fade-img fade-img-2 cutout">
+        </a>
+        <p class="merch-type">Hoodie</p>
+        <h3 class="merch-title">Minimalistic Debut Hoodie</h3>
+        <p class="merch-price">$36.24</p>
+        <a class="disc-listen" href="https://store.samiejaa.com/products/diary-of-desire-minimalistic-debute-hoodie" target="_blank" rel="noopener" aria-label="Shop Minimalistic Debut Hoodie">SHOP</a>
+      </article>
+      <article class="merch-item" data-category="apparel" data-collection="dod" data-search="t-shirt of desire t-shirt t-shirt tshirt tee shirt album cover">
+        <a class="merch-media" href="https://store.samiejaa.com/products/t-shirt-of-desire" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img loading="lazy" decoding="async" src="assets/dod-tshirt.webp" alt="T-Shirt of Desire" class="cutout">
+        </a>
+        <p class="merch-type">T-shirt</p>
+        <h3 class="merch-title">T-Shirt of Desire</h3>
+        <p class="merch-price">$18.45</p>
+        <a class="disc-listen" href="https://store.samiejaa.com/products/t-shirt-of-desire" target="_blank" rel="noopener" aria-label="Shop T-Shirt of Desire">SHOP</a>
+      </article>
+      <article class="merch-item" data-category="apparel" data-collection="dod" data-search="minimalistic t-shirt of desire t-shirt t-shirt tshirt tee shirt departure board minimal">
+        <a class="merch-media" href="https://store.samiejaa.com/products/minimalistic-t-shirt-of-desire" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img loading="lazy" decoding="async" src="assets/dod-minimal-tshirt.webp" alt="Minimalistic T-Shirt of Desire" class="cutout">
+        </a>
+        <p class="merch-type">T-shirt</p>
+        <h3 class="merch-title">Minimalistic T-Shirt of Desire</h3>
+        <p class="merch-price">$18.45</p>
+        <a class="disc-listen" href="https://store.samiejaa.com/products/minimalistic-t-shirt-of-desire" target="_blank" rel="noopener" aria-label="Shop Minimalistic T-Shirt of Desire">SHOP</a>
+      </article>
+      <article class="merch-item" data-category="apparel" data-collection="dod" data-search="meanie beanie dod edition beanie beanie hat cap embroidered">
+        <a class="merch-media" href="https://store.samiejaa.com/products/samiejaas-meanie-beanie-diary-of-desire-edition" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img loading="lazy" decoding="async" src="assets/dod-beanie.webp" alt="Meanie Beanie DoD Edition" class="cutout">
+        </a>
+        <p class="merch-type">Beanie</p>
+        <h3 class="merch-title">Meanie Beanie DoD Edition</h3>
+        <p class="merch-price">$21.59</p>
+        <a class="disc-listen" href="https://store.samiejaa.com/products/samiejaas-meanie-beanie-diary-of-desire-edition" target="_blank" rel="noopener" aria-label="Shop Meanie Beanie DoD Edition">SHOP</a>
+      </article>
     </div>
-
-    <div class="album merch-item">
-      <a href="https://elasticstage.com/samiejaasstore/releases/samiejaas-best-vol-1-album" target="_blank">
-        <img src="assets/Samie Vinyl.jpg" alt="Samiejaa Vinyl">
-      </a>
-
-      <p class="merch-title">Samiejaa's Best Vol. 1 Vinyl</p>
-      <p class="merch-price">$31.90</p>
-    </div>
-
   </section>
+
+  <!-- ===== THE ORIGINALS COLLECTION (everything before Diary of Desire) ===== -->
+  <section class="merch-group" data-group="originals" aria-labelledby="g-org">
+    <h2 class="merch-group-title" id="g-org">The Originals Collection</h2>
+    <div class="merch-shop">
+      <article class="merch-item" data-category="apparel" data-collection="originals" data-search="samiejaa's graveyard hoodie hoodie hoodie sweater sweatshirt graveyard">
+        <a class="merch-media" href="https://store.samiejaa.com/products/samiejaas-graveyard" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img loading="lazy" decoding="async" src="assets/Graveyard hoodie.jpg" alt="Samiejaa's Graveyard Hoodie, front" class="fade-img fade-img-1">
+          <img loading="lazy" decoding="async" src="assets/Graveyard back.jpg" alt="Samiejaa's Graveyard Hoodie, back" class="fade-img fade-img-2">
+        </a>
+        <p class="merch-type">Hoodie</p>
+        <h3 class="merch-title">Samiejaa's Graveyard Hoodie</h3>
+        <p class="merch-price">$37.23</p>
+        <a class="disc-listen" href="https://store.samiejaa.com/products/samiejaas-graveyard" target="_blank" rel="noopener" aria-label="Shop Samiejaa's Graveyard Hoodie">SHOP</a>
+      </article>
+      <article class="merch-item" data-category="apparel" data-collection="originals" data-search="samiejaa's meanie beanie beanie beanie hat cap">
+        <a class="merch-media" href="https://store.samiejaa.com/products/samiejaas-meanie-beanie" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img loading="lazy" decoding="async" src="assets/Meanie beanie pro.jpg" alt="Samiejaa's Meanie Beanie">
+        </a>
+        <p class="merch-type">Beanie</p>
+        <h3 class="merch-title">Samiejaa's Meanie Beanie</h3>
+        <p class="merch-price">$21.59</p>
+        <a class="disc-listen" href="https://store.samiejaa.com/products/samiejaas-meanie-beanie" target="_blank" rel="noopener" aria-label="Shop Samiejaa's Meanie Beanie">SHOP</a>
+      </article>
+      <article class="merch-item" data-category="music" data-collection="originals" data-search="samiejaa's best vol. 1 cd cd cd disc album physical best of">
+        <a class="merch-media" href="https://elasticstage.com/samiejaasstore/releases/samiejaas-best-vol-1-album" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img loading="lazy" decoding="async" src="assets/Samie CD.jpg" alt="Samiejaa's Best Vol. 1 CD">
+        </a>
+        <p class="merch-type">CD</p>
+        <h3 class="merch-title">Samiejaa's Best Vol. 1 CD</h3>
+        <p class="merch-price">$12.90</p>
+        <a class="disc-listen" href="https://elasticstage.com/samiejaasstore/releases/samiejaas-best-vol-1-album" target="_blank" rel="noopener" aria-label="Shop Samiejaa's Best Vol. 1 CD">SHOP</a>
+      </article>
+      <article class="merch-item" data-category="music" data-collection="originals" data-search="samiejaa's best vol. 1 vinyl vinyl vinyl record lp album physical best of">
+        <a class="merch-media" href="https://elasticstage.com/samiejaasstore/releases/samiejaas-best-vol-1-album" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img loading="lazy" decoding="async" src="assets/Samie Vinyl.jpg" alt="Samiejaa's Best Vol. 1 Vinyl">
+        </a>
+        <p class="merch-type">Vinyl</p>
+        <h3 class="merch-title">Samiejaa's Best Vol. 1 Vinyl</h3>
+        <p class="merch-price">$31.90</p>
+        <a class="disc-listen" href="https://elasticstage.com/samiejaasstore/releases/samiejaas-best-vol-1-album" target="_blank" rel="noopener" aria-label="Shop Samiejaa's Best Vol. 1 Vinyl">SHOP</a>
+      </article>
+    </div>
+  </section>
+
+  <div class="merch-empty" id="merch-empty" hidden>
+    <p>Nothing matches that. Try another search or filter.</p>
+    <button type="button" class="disc-listen" id="merch-reset">SHOW EVERYTHING</button>
+  </div>
 </main>
 
   <footer class="social-footer">
-    <a href="https://www.tiktok.com/@samiejaa4life" target="_blank"><i class="fab fa-tiktok"></i></a>
-    <a href="https://www.instagram.com/samiejaa.makesmusic" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.youtube.com/@samiejaa" target="_blank"><i class="fab fa-youtube"></i></a>
-    <a href="https://open.spotify.com/artist/6hWIpKW9JVwSA25vYeVZKI" target="_blank"><i class="fab fa-spotify"></i></a>
-    <a href="https://twitch.tv/samiejaa" target="_blank"><i class="fab fa-twitch"></i></a>
-    <a href="https://discord.gg/7ShRn4pmN5" target="_blank"><i class="fab fa-discord"></i></a>
+    <a href="https://www.tiktok.com/@samiejaa.makesmusic" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+    <a href="https://www.instagram.com/samiejaa.makesmusic" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.youtube.com/@samiejaa" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+    <a href="https://open.spotify.com/artist/6hWIpKW9JVwSA25vYeVZKI" target="_blank" rel="noopener"><i class="fab fa-spotify"></i></a>
+    <a href="https://twitch.tv/samiejaa" target="_blank" rel="noopener"><i class="fab fa-twitch"></i></a>
+    <a href="https://discord.gg/7ShRn4pmN5" target="_blank" rel="noopener"><i class="fab fa-discord"></i></a>
   </footer>  
 
   <div class="copyright">
-    © 2025 SAMIEJAA. All rights reserved.
+    © 2026 SAMIEJAA. All rights reserved.
   </div>  
 
   <script src="script.js"></script>
 
 <script>
-  window.addEventListener("load", function () {
+  function hideLoader() {
     const loader = document.getElementById("loading-screen");
+    if (!loader) return;
     loader.style.opacity = "0";
     setTimeout(() => loader.style.display = "none", 800);
+  }
+  window.addEventListener("load", hideLoader);
+  setTimeout(hideLoader, 2500); // never block the page for more than 2.5s
+</script>
+
+<!-- ===== Merch filters + search ===== -->
+<script>
+(function () {
+  const items  = [...document.querySelectorAll('.merch-shop .merch-item')];
+  const groups = [...document.querySelectorAll('.merch-group')];
+  const input  = document.getElementById('merch-q');
+  const status = document.getElementById('merch-status');
+  const empty  = document.getElementById('merch-empty');
+  const state  = { category: 'all', collection: 'all', q: '' };
+
+  // Links like merch.html?collection=dod or ?category=music open pre-filtered
+  const params = new URLSearchParams(location.search);
+  ['category', 'collection'].forEach(k => { if (params.get(k)) state[k] = params.get(k); });
+  if (params.get('q')) { state.q = params.get('q'); input.value = state.q; }
+
+  const norm = s => s.toLowerCase().replace(/[^a-z0-9 ]/g, ' ');
+
+  function apply() {
+    const words = norm(state.q).split(' ').filter(Boolean);
+    let shown = 0;
+    items.forEach(el => {
+      const ok = (state.category === 'all' || el.dataset.category === state.category)
+              && (state.collection === 'all' || el.dataset.collection === state.collection)
+              && words.every(w => norm(el.dataset.search).includes(w));
+      el.hidden = !ok;
+      if (ok) shown++;
+    });
+    groups.forEach(g => g.hidden = !g.querySelector('.merch-item:not([hidden])'));
+    document.querySelectorAll('.merch-seg').forEach(seg => {
+      seg.querySelectorAll('button').forEach(b =>
+        b.setAttribute('aria-pressed', b.dataset.value === state[seg.dataset.filter]));
+    });
+    empty.hidden = shown > 0;
+    status.textContent = shown === items.length ? `${shown} items` : `Showing ${shown} of ${items.length} items`;
+  }
+
+  document.querySelectorAll('.merch-seg').forEach(seg => {
+    seg.addEventListener('click', e => {
+      const b = e.target.closest('button');
+      if (!b) return;
+      state[seg.dataset.filter] = b.dataset.value;
+      apply();
+    });
   });
+  input.addEventListener('input', () => { state.q = input.value; apply(); });
+  document.getElementById('merch-reset').addEventListener('click', () => {
+    state.category = state.collection = 'all'; state.q = ''; input.value = ''; apply();
+  });
+
+  // Diary of Desire pre-order buttons switch to "ORDER" on release day (visitor's local time)
+  if (Date.now() >= new Date(2026, 9, 11, 0, 0, 0).getTime()) {
+    document.querySelectorAll('[data-dod-label="soon"]').forEach(s => s.hidden = true);
+    document.querySelectorAll('[data-dod-label="live"]').forEach(s => s.hidden = false);
+  }
+
+  apply();
+})();
 </script>
 
 </body>
