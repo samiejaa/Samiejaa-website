@@ -25,7 +25,8 @@
   }
   </script>
 
-  <link rel="icon" href="assets/favicon.png" type="image/png" />
+  <link rel="icon" href="assets/favicon-dod.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon-dod.png" />
 
   <!-- Speed up the connection to external domains before we actually need them -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,6 +36,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Underdog&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
+  <!-- ===== DoD HYPE: head (remove these 2 lines when the hype section goes) ===== -->
+  <link href="https://fonts.googleapis.com/css2?family=Doto:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dod-hero.css" />
   </head>
 <body>
 
@@ -74,6 +78,114 @@
   </header>
 
   <main>
+    <!-- ===== DoD HYPE SECTION START =====
+         Album hype section for "Diary of Desire".
+         TO REVERT: delete everything from this START line down to the
+         END line, then un-comment the ORIGINAL TOP SECTION just below it. -->
+    <section class="dod-hero" id="dod-hero" data-state="soon" aria-labelledby="dod-heading">
+      <div class="dod-main">
+        <div class="dod-cover">
+          <img src="assets/DoD_Front.webp"
+               srcset="assets/DoD_Front_small.webp 600w, assets/DoD_Front.webp 1200w"
+               sizes="(max-width: 900px) 90vw, 520px"
+               width="1200" height="1200" decoding="async" fetchpriority="high"
+               alt="Diary of Desire album cover: Samiejaa on a metro platform">
+        </div>
+
+        <div class="dod-copy">
+          <h1 id="dod-heading" class="dod-title">
+            <span class="dod-only-soon">Are you ready?</span>
+            <span class="dod-only-live">It's here.</span>
+          </h1>
+          <p class="dod-lede dod-only-soon">My debut album <em>Diary of Desire</em> drops 11 October, everywhere you stream music.</p>
+          <p class="dod-lede dod-only-live">My debut album <em>Diary of Desire</em> is out now, everywhere you stream music.</p>
+
+          <div class="dod-board">
+            <div class="dod-board-row dod-board-meta"><span>Platform 60</span><span>Samiejaa</span></div>
+            <div class="dod-board-row dod-board-title">
+              <span>Diary of Desire</span>
+              <span class="dod-board-status"><span class="dod-only-soon">11.10</span><span class="dod-only-live">Arrived</span></span>
+            </div>
+
+            <div class="dod-clock dod-only-soon" role="timer" aria-label="Time until Diary of Desire is released">
+              <div class="dod-unit"><span class="dod-num" data-unit="d">--</span><span class="dod-lbl">days</span></div>
+              <span class="dod-sep" aria-hidden="true">:</span>
+              <div class="dod-unit"><span class="dod-num" data-unit="h">--</span><span class="dod-lbl">hours</span></div>
+              <span class="dod-sep" aria-hidden="true">:</span>
+              <div class="dod-unit"><span class="dod-num" data-unit="m">--</span><span class="dod-lbl">min</span></div>
+              <span class="dod-sep" aria-hidden="true">:</span>
+              <div class="dod-unit"><span class="dod-num" data-unit="s">--</span><span class="dod-lbl">sec</span></div>
+            </div>
+            <div class="dod-arrived dod-only-live">Now playing</div>
+
+            <div class="dod-ticker" aria-hidden="true">
+              <span class="dod-ticker-track dod-only-soon">Diary of Desire arrives at platform 60 on 11 October<i class="dod-dot"></i>Pre-save now so it lands in your library the second it drops<i class="dod-dot"></i>Vinyl and CD pre-orders are open</span>
+              <span class="dod-ticker-track dod-only-live">Diary of Desire has arrived<i class="dod-dot"></i>Out now on all platforms<i class="dod-dot"></i>Get it on vinyl and CD</span>
+            </div>
+          </div>
+
+          <div class="dod-actions">
+            <a href="https://share.amuse.io/album/samiejaa-diary-of-desire" class="cta dod-cta" target="_blank" rel="noopener">
+              <span class="dod-only-soon">PRE-SAVE NOW</span><span class="dod-only-live">LISTEN NOW</span>
+            </a>
+            <p class="dod-note dod-only-soon">Free. Works with Spotify, Apple Music and more.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="dod-shelf">
+        <p class="dod-shelf-title">
+          <span class="dod-only-soon">PRE-ORDER &amp; MERCH</span><span class="dod-only-live">VINYL, CD &amp; MERCH</span>
+        </p>
+        <div class="dod-shelf-grid">
+
+          <!-- Vinyl: mock-up made from the album cover. Swap for a real product photo later if you want. -->
+          <div class="disc-item">
+            <div class="dod-format dod-format--vinyl">
+              <span class="dod-disc"></span>
+              <img loading="lazy" decoding="async" src="assets/DoD_Front_small.webp" alt="Diary of Desire on vinyl">
+            </div>
+            <p class="disc-title">Diary of Desire Vinyl</p>
+            <p class="disc-feat"><span class="dod-only-soon">$31.90</span><span class="dod-only-live">Available now</span></p>
+            <a href="https://elasticstage.com/samiejaasstore/releases/diary-of-desire-album" class="disc-listen" target="_blank" rel="noopener"><span class="dod-only-soon">PRE-ORDER</span><span class="dod-only-live">ORDER</span></a>
+          </div>
+
+          <!-- CD: mock-up made from the album cover. Swap for a real product photo later if you want. -->
+          <div class="disc-item">
+            <div class="dod-format dod-format--cd">
+              <span class="dod-disc"></span>
+              <img loading="lazy" decoding="async" src="assets/DoD_Front_small.webp" alt="Diary of Desire on CD">
+            </div>
+            <p class="disc-title">Diary of Desire CD</p>
+            <p class="disc-feat"><span class="dod-only-soon">$12.90</span><span class="dod-only-live">Available now</span></p>
+            <a href="https://elasticstage.com/samiejaasstore/releases/diary-of-desire-album" class="disc-listen" target="_blank" rel="noopener"><span class="dod-only-soon">PRE-ORDER</span><span class="dod-only-live">ORDER</span></a>
+          </div>
+
+          <!-- PLACEHOLDER MERCH: replace with Diary of Desire merch when it exists -->
+          <div class="disc-item">
+            <div class="disc-fade-images">
+              <img loading="lazy" decoding="async" src="assets/Graveyard hoodie.jpg" alt="Samiejaa hoodie" class="disc-fade-img disc-fade-img-1">
+              <img loading="lazy" decoding="async" src="assets/Graveyard back.jpg" alt="Samiejaa hoodie back" class="disc-fade-img disc-fade-img-2">
+            </div>
+            <p class="disc-title">Graveyard Hoodie</p>
+            <p class="disc-feat">$37.23</p>
+            <a href="https://store.samiejaa.com/products/samiejaas-graveyard" class="disc-listen" target="_blank" rel="noopener">SHOP</a>
+          </div>
+
+          <!-- PLACEHOLDER MERCH: replace with Diary of Desire merch when it exists -->
+          <div class="disc-item">
+            <img loading="lazy" decoding="async" src="assets/Meanie beanie pro.jpg" alt="Samiejaa beanie pro">
+            <p class="disc-title">Meanie Beanie PRO</p>
+            <p class="disc-feat">$21.59</p>
+            <a href="https://store.samiejaa.com/products/samiejaas-meanie-beanie-pro" class="disc-listen" target="_blank" rel="noopener">SHOP</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- ===== DoD HYPE SECTION END ===== -->
+
+    <!-- ===== ORIGINAL TOP SECTION (hidden while the album hype is live) =====
     <h1>WELCOME TO SAMIEJAA'S SITE</h1>
     <p>Where everything Samiejaa related is gathered in one place!</p>
     
@@ -93,6 +205,7 @@
         </div>
   
       </section>
+    ===== ORIGINAL TOP SECTION END ===== -->
 
       <section class="discography-section">
         <div class="discography-header">
@@ -358,6 +471,8 @@ const leftReel = document.querySelector('.left-reel');
 const rightReel = document.querySelector('.right-reel');
 
 let audioCtx, analyser, source, dataArray, bufferLength;
+// Blue bars while album-theme.css is switched on, red otherwise
+const dodBlue = getComputedStyle(document.documentElement).getPropertyValue('--dod-theme').trim() === 'on';
 let spinning = false;
 let initialized = false;
 
@@ -388,7 +503,7 @@ function draw() {
 
   for (let i = 0; i < bufferLength; i++) {
     const barHeight = dataArray[i] / 5;
-    ctx.fillStyle = `rgb(${barHeight + 100},0,0)`;
+    ctx.fillStyle = dodBlue ? `rgb(0,${barHeight + 120},255)` : `rgb(${barHeight + 100},0,0)`;
     ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
     x += barWidth + 1;
   }
@@ -493,6 +608,46 @@ document.addEventListener("DOMContentLoaded", function () {
     merchTrack.scrollBy({ left: 220, behavior: 'smooth' });
   });
 </script>
+
+<!-- ===== DoD HYPE: countdown script (remove with the hype section) ===== -->
+<script>
+(function () {
+  const hero = document.getElementById('dod-hero');
+  if (!hero) return;
+
+  // 11 October 2026, 00:00 in the VISITOR'S OWN timezone (month 9 = October).
+  // Uses the device clock only, no cookies or storage.
+  const RELEASE = new Date(2026, 9, 11, 0, 0, 0);
+
+  // Preview the "live" version any time: add ?dod=live to the URL
+  const forceLive = new URLSearchParams(location.search).get('dod') === 'live';
+
+  const nums = {};
+  hero.querySelectorAll('.dod-num').forEach(n => nums[n.dataset.unit] = n);
+  const pad = n => String(n).padStart(2, '0');
+  let timer = null;
+
+  function goLive(withFlash) {
+    hero.dataset.state = 'live';
+    if (withFlash) hero.classList.add('dod-just-live');
+    if (timer) clearInterval(timer);
+  }
+
+  function tick(first) {
+    const diff = RELEASE.getTime() - Date.now();
+    if (forceLive || diff <= 0) { goLive(!first); return; }
+    const total = Math.floor(diff / 1000);
+    nums.d.textContent = pad(Math.floor(total / 86400));
+    nums.h.textContent = pad(Math.floor(total % 86400 / 3600));
+    nums.m.textContent = pad(Math.floor(total % 3600 / 60));
+    nums.s.textContent = pad(total % 60);
+  }
+
+  tick(true);
+  if (hero.dataset.state !== 'live') timer = setInterval(() => tick(false), 1000);
+})();
+</script>
+<!-- ===== DoD HYPE: countdown script END ===== -->
 
 </body>
 </html>
