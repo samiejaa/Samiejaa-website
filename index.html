@@ -35,9 +35,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Underdog&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
-  <!-- ===== DoD HYPE: head (remove these 2 lines when the hype section goes) ===== -->
+  <!-- ===== COME ON! + DIARY OF DESIRE: head (fonts + styles for the two top sections) ===== -->
   <link href="https://fonts.googleapis.com/css2?family=Doto:wght@700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="dod-hero.css" />
+  <link rel="stylesheet" href="come-on.css" />
   </head>
 <body>
 
@@ -77,57 +79,87 @@
   </header>
 
   <main>
-    <!-- ===== DoD HYPE SECTION START =====
-         Album hype section for "Diary of Desire".
-         TO REVERT: delete everything from this START line down to the
-         END line, then un-comment the ORIGINAL TOP SECTION just below it. -->
-    <section class="dod-hero" id="dod-hero" data-state="soon" aria-labelledby="dod-heading">
-      <div class="dod-main">
-        <div class="dod-cover">
-          <img src="assets/DoD_Front.webp"
-               srcset="assets/DoD_Front_small.webp 600w, assets/DoD_Front.webp 1200w"
-               sizes="(max-width: 900px) 90vw, 520px"
-               width="1200" height="1200" decoding="async" fetchpriority="high"
-               alt="Diary of Desire album cover: Samiejaa on a metro platform">
+    <!-- ===== COME ON! SECTION START =====
+         Release section for the single "COME ON!" (wikuro feat. Xaduma), out 16 November 2026.
+         It counts down to midnight on the 16th in the VISITOR'S own timezone and flips to
+         "out now" by itself. Preview the live version any time with  index.html?comeon=live
+         TO REMOVE: delete everything from this START line to the END line, and delete the
+         come-on.css <link> in the head + the COME ON! script at the bottom of the page.
+         The cover is a PLACEHOLDER: replace assets/come-on-cover.webp (and the _small version). -->
+    <section class="co-stage" id="come-on" data-state="soon" aria-labelledby="co-heading">
+      <div class="co-rose-wrap" aria-hidden="true">
+      <svg class="co-rose" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+        <defs><linearGradient id="coRoseG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e0204c"/><stop offset="1" stop-color="#8a3ffc"/></linearGradient></defs>
+        <g fill="none" stroke="url(#coRoseG)" stroke-width="1.2">
+          <circle cx="100" cy="100" r="96"/><circle cx="100" cy="100" r="84"/><circle cx="100" cy="100" r="26"/><circle cx="100" cy="100" r="10"/>
+          <g id="coPetal"><path d="M100 74 C86 56 86 34 100 18 C114 34 114 56 100 74 Z"/></g>
+          <use href="#coPetal" transform="rotate(30 100 100)"/><use href="#coPetal" transform="rotate(60 100 100)"/>
+          <use href="#coPetal" transform="rotate(90 100 100)"/><use href="#coPetal" transform="rotate(120 100 100)"/>
+          <use href="#coPetal" transform="rotate(150 100 100)"/><use href="#coPetal" transform="rotate(180 100 100)"/>
+          <use href="#coPetal" transform="rotate(210 100 100)"/><use href="#coPetal" transform="rotate(240 100 100)"/>
+          <use href="#coPetal" transform="rotate(270 100 100)"/><use href="#coPetal" transform="rotate(300 100 100)"/>
+          <use href="#coPetal" transform="rotate(330 100 100)"/>
+          <path d="M100 4 V196 M4 100 H196 M32 32 L168 168 M168 32 L32 168"/>
+        </g>
+      </svg>
+      </div>
+
+      <div class="co-inner">
+        <div class="co-cover">
+          <div class="co-frame">
+            <i></i><i></i><i></i><i></i>
+            <!-- PLACEHOLDER COVER: swap this file for the real COME ON! artwork -->
+            <img src="assets/come-on-cover.webp"
+                 srcset="assets/come-on-cover_small.webp 600w, assets/come-on-cover.webp 1200w"
+                 sizes="(max-width: 900px) 70vw, 420px"
+                 width="1200" height="1200" decoding="async" fetchpriority="high"
+                 alt="COME ON! cover art, a single by wikuro featuring Xaduma">
+          </div>
         </div>
 
-        <div class="dod-copy">
-          <h1 id="dod-heading" class="dod-title">
-            <span class="dod-only-soon">Are you ready?</span>
-            <span class="dod-only-live">It's here.</span>
-          </h1>
-          <p class="dod-lede dod-only-soon">My debut album <em>Diary of Desire</em> drops 11 October, everywhere you stream music.</p>
-          <p class="dod-lede dod-only-live">My debut album <em>Diary of Desire</em> is out now, everywhere you stream music.</p>
+        <div class="co-copy">
+          <p class="co-kicker"><span class="co-only-soon">New single · 16 November</span><span class="co-only-live">New single · out now</span></p>
+          <h1 id="co-heading" class="co-title">Come On!</h1>
+          <p class="co-credit">wikuro <em>feat.</em> Xaduma</p>
 
-          <div class="dod-board">
-            <div class="dod-board-row dod-board-meta"><span>Platform 60</span><span>Samiejaa</span></div>
-            <div class="dod-board-row dod-board-title">
-              <span>Diary of Desire</span>
-              <span class="dod-board-status"><span class="dod-only-soon">11.10</span><span class="dod-only-live">Arrived</span></span>
-            </div>
+          <div class="co-divider" aria-hidden="true"><i></i></div>
 
-            <div class="dod-clock dod-only-soon" role="timer" aria-label="Time until Diary of Desire is released">
-              <div class="dod-unit"><span class="dod-num" data-unit="d">--</span><span class="dod-lbl">days</span></div>
-              <span class="dod-sep" aria-hidden="true">:</span>
-              <div class="dod-unit"><span class="dod-num" data-unit="h">--</span><span class="dod-lbl">hours</span></div>
-              <span class="dod-sep" aria-hidden="true">:</span>
-              <div class="dod-unit"><span class="dod-num" data-unit="m">--</span><span class="dod-lbl">min</span></div>
-              <span class="dod-sep" aria-hidden="true">:</span>
-              <div class="dod-unit"><span class="dod-num" data-unit="s">--</span><span class="dod-lbl">sec</span></div>
-            </div>
-            <div class="dod-arrived dod-only-live">Now playing</div>
-
-            <div class="dod-ticker" aria-hidden="true">
-              <span class="dod-ticker-track dod-only-soon">Diary of Desire arrives at platform 60 on 11 October<i class="dod-dot"></i>Pre-save now so it lands in your library the second it drops<i class="dod-dot"></i>Vinyl and CD pre-orders are open</span>
-              <span class="dod-ticker-track dod-only-live">Diary of Desire has arrived<i class="dod-dot"></i>Out now on all platforms<i class="dod-dot"></i>Get it on vinyl and CD</span>
-            </div>
+          <div class="co-clock co-only-soon" role="timer" aria-label="Time until COME ON! is released">
+            <div class="co-unit"><span class="co-num" data-unit="d">--</span><span class="co-lbl">days</span></div>
+            <div class="co-unit"><span class="co-num" data-unit="h">--</span><span class="co-lbl">hours</span></div>
+            <div class="co-unit"><span class="co-num" data-unit="m">--</span><span class="co-lbl">min</span></div>
+            <div class="co-unit"><span class="co-num" data-unit="s">--</span><span class="co-lbl">sec</span></div>
           </div>
+          <div class="co-arrived co-only-live">Out now</div>
 
-          <div class="dod-actions">
-            <a href="https://share.amuse.io/album/samiejaa-diary-of-desire" class="cta dod-cta" target="_blank" rel="noopener">
-              <span class="dod-only-soon">PRE-SAVE NOW</span><span class="dod-only-live">LISTEN NOW</span>
+          <div class="co-actions">
+            <a href="https://share.amuse.io/track/samiejaa-come-on" class="cta co-cta" target="_blank" rel="noopener">
+              <span class="co-only-soon">PRE-SAVE NOW</span><span class="co-only-live">LISTEN NOW</span>
             </a>
-            <p class="dod-note dod-only-soon">Free. Works with Spotify, Apple Music and more.</p>
+            <p class="co-note co-only-soon">Free. Works with Spotify, Apple Music and more.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== COME ON! SECTION END ===== -->
+
+    <!-- ===== DIARY OF DESIRE SECTION START (compact box + collection shelf) =====
+         TO REVERT TO THE ORIGINAL FRONT PAGE: delete everything from this START line down to
+         the END line, then un-comment the ORIGINAL TOP SECTION just below it. -->
+    <section class="dod-hero" id="dod-hero" aria-labelledby="dod-heading">
+      <div class="dod-feature">
+        <img src="assets/DoD_Front.webp"
+             srcset="assets/DoD_Front_small.webp 600w, assets/DoD_Front.webp 1200w"
+             sizes="(max-width: 900px) 80vw, 270px"
+             width="1200" height="1200" decoding="async"
+             alt="Diary of Desire album cover: Samiejaa on a metro platform">
+        <div>
+          <p class="dod-kicker">Debut album · out now</p>
+          <h2 id="dod-heading" class="dod-title">Diary of Desire</h2>
+          <p class="dod-lede">My debut album is out now, everywhere you stream music. Vinyl and CD are available too.</p>
+          <div class="dod-actions">
+            <a href="https://share.amuse.io/album/samiejaa-diary-of-desire" class="cta dod-cta" target="_blank" rel="noopener">LISTEN NOW</a>
+            <a href="merch.html?collection=dod" class="dod-outline">VINYL, CD &amp; MERCH</a>
           </div>
         </div>
       </div>
@@ -146,7 +178,7 @@
             </div>
             <p class="disc-title">Diary of Desire Vinyl</p>
             <p class="disc-feat">$31.90</p>
-            <a href="https://elasticstage.com/samiejaasstore/releases/diary-of-desire-album" class="disc-listen" target="_blank" rel="noopener"><span class="dod-only-soon">PRE-ORDER</span><span class="dod-only-live">ORDER</span></a>
+            <a href="https://elasticstage.com/samiejaasstore/releases/diary-of-desire-album" class="disc-listen" target="_blank" rel="noopener">ORDER</a>
           </div>
 
           <!-- CD: mock-up made from the album cover. Swap for a real product photo later if you want. -->
@@ -157,7 +189,7 @@
             </div>
             <p class="disc-title">Diary of Desire CD</p>
             <p class="disc-feat">$12.90</p>
-            <a href="https://elasticstage.com/samiejaasstore/releases/diary-of-desire-album" class="disc-listen" target="_blank" rel="noopener"><span class="dod-only-soon">PRE-ORDER</span><span class="dod-only-live">ORDER</span></a>
+            <a href="https://elasticstage.com/samiejaasstore/releases/diary-of-desire-album" class="disc-listen" target="_blank" rel="noopener">ORDER</a>
           </div>
 
           <!-- Diary of Desire apparel -->
@@ -205,7 +237,7 @@
         </div>
       </div>
     </section>
-    <!-- ===== DoD HYPE SECTION END ===== -->
+    <!-- ===== DIARY OF DESIRE SECTION END ===== -->
 
     <!-- ===== ORIGINAL TOP SECTION (hidden while the album hype is live) =====
     <h1>WELCOME TO SAMIEJAA'S SITE</h1>
@@ -411,14 +443,14 @@
             <img loading="lazy" decoding="async" src="assets/dod-vinyl.webp" class="cutout" alt="Diary of Desire on vinyl">
             <p class="disc-title">Diary of Desire Vinyl</p>
             <p class="disc-feat">$31.90</p>
-            <a href="https://elasticstage.com/samiejaasstore/releases/diary-of-desire-album" class="disc-listen" target="_blank" rel="noopener">SHOP</a>
+            <a href="https://elasticstage.com/samiejaasstore/releases/diary-of-desire-album" class="disc-listen" target="_blank" rel="noopener">ORDER</a>
           </div>
 
           <div class="disc-item">
             <img loading="lazy" decoding="async" src="assets/dod-cd.webp" class="cutout" alt="Diary of Desire on CD">
             <p class="disc-title">Diary of Desire CD</p>
             <p class="disc-feat">$12.90</p>
-            <a href="https://elasticstage.com/samiejaasstore/releases/diary-of-desire-album" class="disc-listen" target="_blank" rel="noopener">SHOP</a>
+            <a href="https://elasticstage.com/samiejaasstore/releases/diary-of-desire-album" class="disc-listen" target="_blank" rel="noopener">ORDER</a>
           </div>
 
           <div class="disc-item">
@@ -645,6 +677,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const bgMusic = document.getElementById("bg-music");
   const snippet = document.getElementById("song");
   const muteBtn = document.getElementById("mute-btn");
+  if (!muteBtn) return;   // this page has no mute button, so skip (avoids a console error)
 
   muteBtn.addEventListener("click", () => {
     const shouldMute = !bgMusic.muted || !snippet.muted;
@@ -686,27 +719,27 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 </script>
 
-<!-- ===== DoD HYPE: countdown script (remove with the hype section) ===== -->
+<!-- ===== COME ON! countdown script (remove with the COME ON! section) ===== -->
 <script>
 (function () {
-  const hero = document.getElementById('dod-hero');
-  if (!hero) return;
+  const stage = document.getElementById('come-on');
+  if (!stage) return;
 
-  // 11 October 2026, 00:00 in the VISITOR'S OWN timezone (month 9 = October).
-  // Uses the device clock only, no cookies or storage.
-  const RELEASE = new Date(2026, 9, 11, 0, 0, 0);
+  // 16 November 2026, 00:00 in the VISITOR'S OWN timezone (month 10 = November).
+  // Uses the device clock only: no cookies, no storage.
+  const RELEASE = new Date(2026, 10, 16, 0, 0, 0);
 
-  // Preview the "live" version any time: add ?dod=live to the URL
-  const forceLive = new URLSearchParams(location.search).get('dod') === 'live';
+  // Preview the "live" version any time: add ?comeon=live to the URL
+  const forceLive = new URLSearchParams(location.search).get('comeon') === 'live';
 
   const nums = {};
-  hero.querySelectorAll('.dod-num').forEach(n => nums[n.dataset.unit] = n);
+  stage.querySelectorAll('.co-num').forEach(n => nums[n.dataset.unit] = n);
   const pad = n => String(n).padStart(2, '0');
   let timer = null;
 
   function goLive(withFlash) {
-    hero.dataset.state = 'live';
-    if (withFlash) hero.classList.add('dod-just-live');
+    stage.dataset.state = 'live';
+    if (withFlash) stage.classList.add('co-just-live');
     if (timer) clearInterval(timer);
   }
 
@@ -721,10 +754,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   tick(true);
-  if (hero.dataset.state !== 'live') timer = setInterval(() => tick(false), 1000);
+  if (stage.dataset.state !== 'live') timer = setInterval(() => tick(false), 1000);
 })();
 </script>
-<!-- ===== DoD HYPE: countdown script END ===== -->
+<!-- ===== COME ON! countdown script END ===== -->
 
 </body>
 </html>
