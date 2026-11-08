@@ -3,24 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SAMIEJAA – About</title>
-  <link rel="icon" href="assets/favicon.png" type="image/png" />
+  <title>SAMIEJAA – Reviews</title>
+  <meta name="description" content="Tech reviews by Mikkel for Techsen, a Danish tech news and review site, plus the app and website he built for the Techsen team." />
+  <link rel="icon" href="assets/favicon-dod.png" type="image/png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
   <link href="https://fonts.googleapis.com/css2?family=Underdog&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
-  </head>
+  <!-- Fonts for the two artist looks: Doto (dot-matrix labels), Cormorant Garamond + Courier Prime (the indie look) -->
+  <link href="https://fonts.googleapis.com/css2?family=Doto:wght@700;800;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="press.css" />
+</head>
 <body>
 
   <div id="loading-screen">
-  <img src="assets/logo.png" alt="Loading..." />
-</div>
+    <img decoding="async" src="assets/logo.png" alt="Loading..." />
+  </div>
 
   <header>
-            <div class="logo">
-          <a href="index.html">
-            <img src="assets/logo.png" alt="Samiejaa Logo">
-          </a>
-        </div>        
+    <div class="logo">
+      <a href="index.html">
+        <img decoding="async" src="assets/logo.png" alt="Samiejaa Logo">
+      </a>
+    </div>
 
     <nav>
       <input type="checkbox" id="menu-toggle" />
@@ -32,65 +41,173 @@
 
       <div class="nav-content">
         <ul class="nav-left">
-          <li><a href="game.html">GAME</a></li>
+          <li><a href="press.html">PRESS</a></li>
           <li><a href="music.html">MUSIC</a></li>
           <li><a href="merch.html">MERCH</a></li>
         </ul>
 
         <ul class="nav-right">
-           <li><a href="reviews.html">REVIEWS</a></li>
-            <li><a href="collab.html">CONTACT</a></li>
-            <li><a href="about.html">ABOUT</a></li>
-          </ul>
+          <li><a href="reviews.html">REVIEWS</a></li>
+          <li><a href="collab.html">CONTACT</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+        </ul>
       </div>
-      </nav>      
+    </nav>
   </header>
 
 
-  <main>
-    <h1>Reviews</h1>
-    <p>PAGE UNDER CONSTRUCTION</p>
+  <main class="p-page">
+    <div class="p-wrap" style="max-width:1040px">
 
-    <section class="aboutme-info">
-        <p class="bio-tagline">
-          PAGE UNDER CONSTRUCTION
-        </p>
-        <p>
-        Samiejaa is a journalist at Techsen.dk and does danish tech reviews whcih you can find here(Insert Link).
-        </p>
-        <p>
-          You can also find many of his reviews under his own name, in english on his 2nd TikTok @Samiejaa_underground(insert link). Here ho does both tech and Monster Energy reviews.
-        </p>
-        <p>
-         !!THIS PAGE IS UNDER CONSTRUcTION!!
-        </p>
+    <section class="p-hero" aria-labelledby="rev-h">
+      <p class="p-kicker">Techsen · Tech reviews</p>
+      <h1 id="rev-h" class="p-title">REVIEWS</h1>
+      <p class="p-lede" style="margin-bottom:0">Phones, headphones, gaming gear and more, reviewed for Techsen, a Danish tech site. Plus the system I built to keep the team running.</p>
+    </section>
 
-      </section>
+    <!-- ===== Techsen ===== -->
+    <section class="p-section" style="margin-top:1rem" aria-labelledby="techsen-h">
+      <div class="p-card">
+        <h3 id="techsen-h">I write for Techsen</h3>
+        <p>I'm a journalist and editor at <a href="https://techsen.dk" target="_blank" rel="noopener">Techsen</a>, a Danish tech news and review site with the tagline &ldquo;Tech for alle&rdquo; (tech for everyone). I joined in February 2026 and work there part-time and remotely: reviewing gear, editing, and looking after PR and social media.</p>
+        <p>My articles are published under the name <strong>Mikkel Techsen</strong> and written in Danish, so the headlines below are too. I've added a short line in English to each one.</p>
+        <ul class="p-chips" aria-label="At a glance">
+          <li>Journalist &amp; editor</li>
+          <li>Since February 2026</li>
+          <li>Part-time, remote</li>
+          <li>Written in Danish</li>
+        </ul>
+        <div class="p-actions">
+          <a class="p-dlbtn" href="https://techsen.dk/author/mikkel-techsen/" target="_blank" rel="noopener" style="margin-top:0">ALL MY ARTICLES</a>
+          <a class="p-btn-ghost" href="https://techsen.dk" target="_blank" rel="noopener">VISIT TECHSEN</a>
+        </div>
+      </div>
+    </section>
 
+    <!-- ===== Reviews ===== -->
+    <section class="p-section" aria-labelledby="list-h">
+      <h2 id="list-h" class="p-h2">Reviews I've written</h2>
+      <p class="p-lede-s">A selection of my reviews for Techsen, newest first. The full list, with news and tips, is on my author page.</p>
+      <div class="p-rev-grid">
+        <article class="p-rev">
+          <p class="p-rev-meta"><span>5 Nov 2026</span><span class="p-rev-tag">Gaming</span></p>
+          <h3><a href="https://techsen.dk/logitech-g-pro-x3-superstrike-anmeldelse/" target="_blank" rel="noopener">Logitech G Pro X3 Superstrike</a></h3>
+          <p class="p-rev-da" lang="da">&ldquo;Anmeldelse: Logitech G Pro X3 Superstrike – En fantastisk mus, men er opgraderingen nødvendig?&rdquo;</p>
+          <p class="p-rev-en">A great mouse, but X2 owners have little reason to upgrade. For anyone buying new, it&#x27;s the one to pick.</p>
+          <a class="p-rev-link" href="https://techsen.dk/logitech-g-pro-x3-superstrike-anmeldelse/" target="_blank" rel="noopener">Read the review (in Danish) &rarr;</a>
+        </article>
+        <article class="p-rev">
+          <p class="p-rev-meta"><span>31 Oct 2026</span><span class="p-rev-tag">Headphones</span></p>
+          <h3><a href="https://techsen.dk/fairbuds-2-anmeldelse/" target="_blank" rel="noopener">Fairbuds 2</a></h3>
+          <p class="p-rev-da" lang="da">&ldquo;Fairbuds 2 anmeldelse: Bæredygtig tanke med et hult lydbillede&rdquo;</p>
+          <p class="p-rev-en">Sustainable thinking, like replaceable batteries, but weak noise cancelling and a hollow sound make it hard to recommend.</p>
+          <a class="p-rev-link" href="https://techsen.dk/fairbuds-2-anmeldelse/" target="_blank" rel="noopener">Read the review (in Danish) &rarr;</a>
+        </article>
+        <article class="p-rev">
+          <p class="p-rev-meta"><span>26 Oct 2026</span><span class="p-rev-tag">Software</span></p>
+          <h3><a href="https://techsen.dk/tidal-vs-spotify-test-og-erfaringer/" target="_blank" rel="noopener">Tidal vs. Spotify</a></h3>
+          <p class="p-rev-da" lang="da">&ldquo;Efter en måned med Tidal: Er det på tide at vinke farvel til Spotify og Apple Music?&rdquo;</p>
+          <p class="p-rev-en">A month with Tidal: is it time to say goodbye to Spotify and Apple Music?</p>
+          <a class="p-rev-link" href="https://techsen.dk/tidal-vs-spotify-test-og-erfaringer/" target="_blank" rel="noopener">Read the review (in Danish) &rarr;</a>
+        </article>
+        <article class="p-rev">
+          <p class="p-rev-meta"><span>8 Oct 2026</span><span class="p-rev-tag">Phones</span></p>
+          <h3><a href="https://techsen.dk/fairphone-6-plus-anmeldelse/" target="_blank" rel="noopener">Fairphone 6+</a></h3>
+          <p class="p-rev-da" lang="da">&ldquo;Fairphone 6+ anmeldelse: Telefonen der er alt for nem at reparere&rdquo;</p>
+          <p class="p-rev-en">The phone that&#x27;s far too easy to repair.</p>
+          <a class="p-rev-link" href="https://techsen.dk/fairphone-6-plus-anmeldelse/" target="_blank" rel="noopener">Read the review (in Danish) &rarr;</a>
+        </article>
+        <article class="p-rev">
+          <p class="p-rev-meta"><span>26 Sep 2026</span><span class="p-rev-tag">Headphones</span></p>
+          <h3><a href="https://techsen.dk/sennheiser-hd-480-pro-anmeldelse/" target="_blank" rel="noopener">Sennheiser HD 480 PRO</a></h3>
+          <p class="p-rev-da" lang="da">&ldquo;Test: Sennheiser HD 480 PRO – Lukket studie-præcision med imponerende komfort&rdquo;</p>
+          <p class="p-rev-en">Closed-back studio precision with impressive comfort.</p>
+          <a class="p-rev-link" href="https://techsen.dk/sennheiser-hd-480-pro-anmeldelse/" target="_blank" rel="noopener">Read the review (in Danish) &rarr;</a>
+        </article>
+        <article class="p-rev">
+          <p class="p-rev-meta"><span>14 Sep 2026</span><span class="p-rev-tag">Everyday products</span></p>
+          <h3><a href="https://techsen.dk/logitech-g-pro-x2-superstrike-anmeldelse/" target="_blank" rel="noopener">Logitech G Pro X2 Superstrike</a></h3>
+          <p class="p-rev-da" lang="da">&ldquo;Logitech G Pro X2 Superstrike: Magnetiske switches og lynhurtige klik&rdquo;</p>
+          <p class="p-rev-en">Magnetic switches and lightning-fast clicks.</p>
+          <a class="p-rev-link" href="https://techsen.dk/logitech-g-pro-x2-superstrike-anmeldelse/" target="_blank" rel="noopener">Read the review (in Danish) &rarr;</a>
+        </article>
+        <article class="p-rev">
+          <p class="p-rev-meta"><span>7 Sep 2026</span><span class="p-rev-tag">Headphones</span></p>
+          <h3><a href="https://techsen.dk/sennheiser-hd-490-pro-vs-hd-480-pro/" target="_blank" rel="noopener">Sennheiser HD 490 PRO vs. HD 480 PRO</a></h3>
+          <p class="p-rev-da" lang="da">&ldquo;Sennheiser HD 490 PRO vs. HD 480 PRO: Hvilket studie-headset skal du vælge?&rdquo;</p>
+          <p class="p-rev-en">Which studio headset should you choose?</p>
+          <a class="p-rev-link" href="https://techsen.dk/sennheiser-hd-490-pro-vs-hd-480-pro/" target="_blank" rel="noopener">Read the review (in Danish) &rarr;</a>
+        </article>
+        <article class="p-rev">
+          <p class="p-rev-meta"><span>3 Sep 2026</span><span class="p-rev-tag">Headphones</span></p>
+          <h3><a href="https://techsen.dk/test-sennheiser-momentum-true-wireless-5-opdateret/" target="_blank" rel="noopener">Sennheiser Momentum True Wireless 5</a></h3>
+          <p class="p-rev-da" lang="da">&ldquo;Sennheiser Momentum True Wireless 5 Test: Miljøvenlig Innovation, Men Hvor Blev Bassen Af?&rdquo;</p>
+          <p class="p-rev-en">Eco-friendly innovation, but where did the bass go?</p>
+          <a class="p-rev-link" href="https://techsen.dk/test-sennheiser-momentum-true-wireless-5-opdateret/" target="_blank" rel="noopener">Read the review (in Danish) &rarr;</a>
+        </article>
+      </div>
+      <p style="text-align:center;margin:1.6rem 0 0"><a class="p-dlbtn" href="https://techsen.dk/author/mikkel-techsen/" target="_blank" rel="noopener" style="margin-top:0">SEE EVERYTHING I'VE WRITTEN</a></p>
+    </section>
+
+    <!-- ===== More reviews + behind the scenes ===== -->
+    <section class="p-section" aria-label="More reviews and behind the scenes">
+      <div class="p-cols">
+        <div class="p-card">
+          <p class="p-kicker-s" style="color:var(--s-cyan)">Under my own name</p>
+          <h3>More reviews, in English</h3>
+          <p>Outside of Techsen I also post reviews in English on my second TikTok, <strong>@samiejaaundercover</strong>. That's where I review both tech and Monster Energy.</p>
+          <div class="p-actions">
+            <a class="p-dlbtn" href="https://www.tiktok.com/@samiejaaundercover" target="_blank" rel="noopener" style="margin-top:0"><i class="fa-brands fa-tiktok" aria-hidden="true"></i> WATCH ON TIKTOK</a>
+          </div>
+        </div>
+
+        <div class="p-card p-card--system" aria-labelledby="sys-h">
+          <p class="p-kicker-s">Behind the scenes</p>
+          <h3 id="sys-h">The system the team runs on</h3>
+          <p>Fun fact: the app and website the Techsen team uses every day are made by me. It's our own internal system for keeping track of which test products each of us is holding, and for planning who publishes which article, and when.</p>
+          <p>It isn't public, but it's what keeps our review units and our publishing schedule in order.</p>
+          <ul class="p-chips" aria-label="What it does">
+            <li>Android app</li>
+            <li>Website</li>
+            <li>Product storage</li>
+            <li>Publishing schedule</li>
+            <li>Reminders</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="p-press-cta" aria-label="More about me">
+      <a href="about.html" class="cta">MORE ABOUT ME</a>
+    </section>
+
+    </div>
   </main>
 
   <footer class="social-footer">
-    <a href="https://www.tiktok.com/@samiejaa.makesmusic" target="_blank"><i class="fab fa-tiktok"></i></a>
-    <a href="https://www.instagram.com/samiejaa.makesmusic" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.youtube.com/@samiejaa" target="_blank"><i class="fab fa-youtube"></i></a>
-    <a href="https://open.spotify.com/artist/6hWIpKW9JVwSA25vYeVZKI" target="_blank"><i class="fab fa-spotify"></i></a>
-    <a href="https://twitch.tv/samiejaa" target="_blank"><i class="fab fa-twitch"></i></a>
-    <a href="https://discord.gg/7ShRn4pmN5" target="_blank"><i class="fab fa-discord"></i></a>
-  </footer>  
+    <a href="https://www.tiktok.com/@samiejaa.makesmusic" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    <a href="https://www.instagram.com/samiejaa.makesmusic" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.youtube.com/@samiejaa" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    <a href="https://open.spotify.com/artist/6hWIpKW9JVwSA25vYeVZKI" target="_blank" rel="noopener" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+    <a href="https://twitch.tv/samiejaa" target="_blank" rel="noopener" aria-label="Twitch"><i class="fab fa-twitch"></i></a>
+    <a href="https://discord.gg/7ShRn4pmN5" target="_blank" rel="noopener" aria-label="Discord"><i class="fab fa-discord"></i></a>
+  </footer>
 
   <div class="copyright">
-    © 2025 SAMIEJAA. All rights reserved.
-  </div>  
+    © 2026 SAMIEJAA. All rights reserved.
+  </div>
 
   <script src="script.js"></script>
-
-<script>
-  window.addEventListener("load", function () {
-    const loader = document.getElementById("loading-screen");
-    loader.style.opacity = "0";
-    setTimeout(() => loader.style.display = "none", 800);
-  });
-</script>
+  <script>
+    function hideLoader() {
+      const loader = document.getElementById("loading-screen");
+      if (!loader) return;
+      loader.style.opacity = "0";
+      setTimeout(() => loader.style.display = "none", 800);
+    }
+    window.addEventListener("load", hideLoader);
+    setTimeout(hideLoader, 2500);   // never let the loader block the page
+  </script>
 
 </body>
 </html>

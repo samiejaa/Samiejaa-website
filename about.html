@@ -4,23 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SAMIEJAA – About</title>
-  <link rel="icon" href="assets/favicon.png" type="image/png" />
+  <meta name="description" content="About Samiejaa and Mikkel Hammershøy: one musician from Denmark, two artist names, plus journalism at Techsen." />
+  <link rel="icon" href="assets/favicon-dod.png" type="image/png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
   <link href="https://fonts.googleapis.com/css2?family=Underdog&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
-  </head>
+  <!-- Fonts for the two artist looks: Doto (dot-matrix labels), Cormorant Garamond + Courier Prime (the indie look) -->
+  <link href="https://fonts.googleapis.com/css2?family=Doto:wght@700;800;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="press.css" />
+</head>
 <body>
 
   <div id="loading-screen">
-  <img src="assets/logo.png" alt="Loading..." />
-</div>
+    <img decoding="async" src="assets/logo.png" alt="Loading..." />
+  </div>
 
   <header>
-            <div class="logo">
-          <a href="index.html">
-            <img src="assets/logo.png" alt="Samiejaa Logo">
-          </a>
-        </div>        
+    <div class="logo">
+      <a href="index.html">
+        <img decoding="async" src="assets/logo.png" alt="Samiejaa Logo">
+      </a>
+    </div>
 
     <nav>
       <input type="checkbox" id="menu-toggle" />
@@ -32,84 +41,199 @@
 
       <div class="nav-content">
         <ul class="nav-left">
-          <li><a href="game.html">GAME</a></li>
+          <li><a href="press.html">PRESS</a></li>
           <li><a href="music.html">MUSIC</a></li>
           <li><a href="merch.html">MERCH</a></li>
         </ul>
 
         <ul class="nav-right">
-           <li><a href="reviews.html">REVIEWS</a></li>
-            <li><a href="collab.html">CONTACT</a></li>
-            <li><a href="about.html">ABOUT</a></li>
-          </ul>
+          <li><a href="reviews.html">REVIEWS</a></li>
+          <li><a href="collab.html">CONTACT</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+        </ul>
       </div>
-      </nav>      
+    </nav>
   </header>
 
 
-  <main>
-    <h1>WHO IS SAMIEJAA?</h1>
-    <p>A little something about me :3</p>
+  <main class="p-page">
+    <div class="p-wrap" style="max-width:1040px">
 
-    <section class="aboutme-info">
-        <p class="bio-tagline">
-          18-year-old musician & creator from Denmark (He/They)
-        </p>
-        <p>
-          Samiejaa has been drawn to music for as long as he can remember — but it wasn't until 2023 that he started turning that passion into something real. Since then, he's been in constant motion: experimenting, releasing, and refining his sound with every track he puts out.
-        </p>
-        <p>
-          His music lives somewhere between worlds — pulling from electronic, dance, and scene-influenced production while weaving in elements of indie, pop, and rock. He's not chasing a single genre. He's chasing a feeling, and the sound keeps evolving.
-        </p>
-        <p>
-          Outside of music, Samiejaa is studying communications, IT and design — learning the full process behind how things are built and experienced, from concept to finished product. He builds his own websites, designs his own visuals, and shapes his own creative identity from the ground up.
-        </p>
-        <p>
-          Everything you see here? That's him.
-        </p>
-      </section>
+    <section class="p-hero" aria-labelledby="about-h">
+      <h1 id="about-h" class="p-title">WHO IS SAMIEJAA?</h1>
+      <p class="p-lede" style="margin-bottom:0">A little something about me :3</p>
+    </section>
 
-      <section class="Samiejaa-pics">
-        <div class="MePic1">
-          <div class="pic-frame pic-frame--tall">
-            <img src="assets/aboutmepic2.jpg" alt="Samiejaa pic 2">
-            <div class="pic-overlay"></div>
-          </div>
-          <div class="pic-frame pic-frame--short">
-            <img src="assets/aboutmepic.jpg" alt="Samiejaa pic 1">
-            <div class="pic-overlay"></div>
-          </div>
-          <div class="pic-frame pic-frame--tall">
-            <img src="assets/aboutmepic3.jpg" alt="Samiejaa pic 3">
-            <div class="pic-overlay"></div>
-          </div>
+    <!-- ===== Intro ===== -->
+    <section class="p-origin" style="grid-template-columns:minmax(0,1fr)" aria-label="Introduction">
+      <div>
+        <figure class="p-cover" style="--tilt:3deg;--cw:128px">
+            <a class="p-cover-img" href="https://share.amuse.io/track/samiejaa-borderline" target="_blank" rel="noopener" aria-label="Listen to BORDERLINE">
+              <img src="assets/cover2.png" alt="BORDERLINE cover art" width="600" height="600" loading="lazy" decoding="async">
+            </a>
+            <figcaption>
+              <span class="p-cover-title">BORDERLINE</span>
+              <a class="p-cover-dl" href="assets/cover2.png" download="samiejaa-borderline-cover.png"><i class="fa-solid fa-download" aria-hidden="true"></i> Download</a>
+            </figcaption>
+          </figure>
+        <p>Hi, I'm Mikkel (he/they), an 18-year-old musician and creator from Denmark. I've loved music for as long as I can remember, but in 2023 I started taking it seriously, and I've been making and refining my sound ever since. The music that's online today starts on 25 July 2025 with <em>BORDERLINE</em>, my oldest song that's still out.</p>
+        <p>It never really stayed in one genre. I care more about what a song feels like than what box it fits in, so electronic, dance and scene-inspired sounds have always lived next to indie, pop and rock in my music.</p>
+        <p>For a while all of it lived under one name. In November 2026, a year after my first indie release, I decided to split my music into two artist names, to make it easier for you (and for the algorithm) to find the music you actually like. So now I'm two artists.</p>
+      </div>
+    </section>
+
+    <h2 class="p-h2" style="text-align:center;margin:2.4rem 0 1.2rem">Two names, one person</h2>
+
+    <div class="p-about-two">
+      <article class="p-artist p-artist--s" id="samiejaa" aria-labelledby="samie-h">
+        <p class="p-role">My main thing</p>
+        <h2 id="samie-h">Samiejaa</h2>
+        <p class="p-tag">Electronic and EDM. Music that makes you want to move.</p>
+
+        <p>Samiejaa is where I started. It's all of my electronic, EDM and dance stuff: energetic songs that could make you want to dance. I looked up to a lot of artists in this genre when I began, and these days I mostly do it for fun.</p>
+
+        <figure class="p-cover" style="--tilt:2deg">
+            <a class="p-cover-img" href="https://share.amuse.io/album/samiejaa-diary-of-desire" target="_blank" rel="noopener" aria-label="Listen to Diary of Desire">
+              <img src="assets/DoD_Front.webp" alt="Diary of Desire cover art" width="600" height="600" loading="lazy" decoding="async">
+            </a>
+            <figcaption>
+              <span class="p-cover-title">Diary of Desire</span>
+              <a class="p-cover-dl" href="assets/DoD_Front.webp" download="samiejaa-diary-of-desire-cover.webp"><i class="fa-solid fa-download" aria-hidden="true"></i> Download</a>
+            </figcaption>
+          </figure>
+        <p>I recently released my debut album, <em>Diary of Desire</em>, and I'm really proud of it. You can find it on all streaming platforms, and on vinyl and CD in the shop.</p>
+
+        <figure class="p-cover p-cover--l" style="--tilt:-2deg">
+            <a class="p-cover-img" href="https://share.amuse.io/track/samiejaa-come-on" target="_blank" rel="noopener" aria-label="Listen to COME ON!">
+              <img src="assets/come-on-cover.webp" alt="COME ON! cover art" width="600" height="600" loading="lazy" decoding="async">
+            </a>
+            <figcaption>
+              <span class="p-cover-title">COME ON!</span>
+              <a class="p-cover-dl" href="assets/come-on-cover.webp" download="samiejaa-come-on-cover.webp"><i class="fa-solid fa-download" aria-hidden="true"></i> Download</a>
+            </figcaption>
+          </figure>
+        <p><em>COME ON!</em> is a really big one for me: a song with wikuro, who's a lot bigger than me with around 10k monthly listeners on Spotify, featuring Xaduma, who produced it and has around 100k.</p>
+
+        <div class="p-actions">
+          <a href="https://share.amuse.io/album/samiejaa-diary-of-desire" class="cta" target="_blank" rel="noopener">LISTEN TO THE ALBUM</a>
+          <a href="music.html?persona=samiejaa" class="p-btn-ghost">ALL SAMIEJAA MUSIC</a>
         </div>
-      </section>
+      </article>
+      <article class="p-artist p-artist--m" id="mikkel" aria-labelledby="mikkel-h">
+        <p class="p-role">My official side project</p>
+        <h2 id="mikkel-h">Mikkel Hammershøy</h2>
+        <p class="p-tag">Indie, rock and pop. The more personal side.</p>
 
+        <p>Mikkel Hammershøy is part of my real name, and I picked it because the music here is closer to me as a person. It's indie, rock and pop, darker and more serious, and the lyrics are a lot deeper and mean more to me.</p>
+
+        <div class="p-cluster">
+          <figure class="p-cover" style="--tilt:-3deg">
+            <a class="p-cover-img" href="https://open.spotify.com/track/2pb5AOvPd3xITt4gDSQNP0" target="_blank" rel="noopener" aria-label="Listen to dead2u">
+              <img src="assets/dead2u.png" alt="dead2u cover art" width="600" height="600" loading="lazy" decoding="async">
+            </a>
+            <figcaption>
+              <span class="p-cover-title">dead2u</span>
+              <a class="p-cover-dl" href="assets/dead2u.png" download="mikkel-hammershoy-dead2u-cover.png" aria-label="Download dead2u cover art"><i class="fa-solid fa-download" aria-hidden="true"></i> Download</a>
+            </figcaption>
+          </figure>
+          <figure class="p-cover" style="--tilt:2deg">
+            <a class="p-cover-img" href="https://share.amuse.io/track/samiejaa-love-beyond-death" target="_blank" rel="noopener" aria-label="Listen to Love Beyond Death">
+              <img src="assets/love beyond death.webp" alt="Love Beyond Death cover art" width="600" height="600" loading="lazy" decoding="async">
+            </a>
+            <figcaption>
+              <span class="p-cover-title">Love Beyond Death</span>
+              <a class="p-cover-dl" href="assets/love beyond death.webp" download="mikkel-hammershoy-love-beyond-death-cover.webp" aria-label="Download Love Beyond Death cover art"><i class="fa-solid fa-download" aria-hidden="true"></i> Download</a>
+            </figcaption>
+          </figure>
+          <figure class="p-cover" style="--tilt:3deg">
+            <a class="p-cover-img" href="https://share.amuse.io/track/samiejaa-goodbye" target="_blank" rel="noopener" aria-label="Listen to Goodbye">
+              <img src="assets/goodbye.jpg" alt="Goodbye cover art" width="600" height="600" loading="lazy" decoding="async">
+            </a>
+            <figcaption>
+              <span class="p-cover-title">Goodbye</span>
+              <a class="p-cover-dl" href="assets/goodbye.jpg" download="mikkel-hammershoy-goodbye-cover.jpg" aria-label="Download Goodbye cover art"><i class="fa-solid fa-download" aria-hidden="true"></i> Download</a>
+            </figcaption>
+          </figure>
+          <figure class="p-cover" style="--tilt:-2deg">
+            <a class="p-cover-img" href="https://share.amuse.io/track/samiejaa-yearn-for-you" target="_blank" rel="noopener" aria-label="Listen to Yearn For You">
+              <img src="assets/yearnforyou.webp" alt="Yearn For You cover art" width="600" height="600" loading="lazy" decoding="async">
+            </a>
+            <figcaption>
+              <span class="p-cover-title">Yearn For You</span>
+              <a class="p-cover-dl" href="assets/yearnforyou.webp" download="mikkel-hammershoy-yearn-for-you-cover.webp" aria-label="Download Yearn For You cover art"><i class="fa-solid fa-download" aria-hidden="true"></i> Download</a>
+            </figcaption>
+          </figure>
+        </div>
+        <p>I'm moving my indie songs over to this name: <em>dead2u</em>, <em>Love Beyond Death</em>, <em>Goodbye</em> and <em>Yearn For You</em>, which was my very first indie song, back in November 2025.</p>
+        <p>Samiejaa stays my main thing, but that doesn't mean Mikkel Hammershøy is any less important.</p>
+
+        <div class="p-actions">
+          <a href="music.html?persona=mikkel" class="p-btn-ghost">LISTEN TO THE SONGS</a>
+        </div>
+      </article>
+    </div>
+
+    <!-- ===== Techsen ===== -->
+    <section class="p-section" aria-labelledby="techsen-h">
+      <div class="p-card">
+        <h3 id="techsen-h">Outside of music: Techsen</h3>
+        <p>I'm a journalist and editor at <a href="https://techsen.dk" target="_blank" rel="noopener">Techsen</a>, a Danish tech news and review site with the tagline "Tech for alle". Since February 2026 I've worked there part-time and remotely, writing and editing reviews and handling PR and social media.</p>
+        <p>I even built the app and website the Techsen team uses to keep track of its test products and who publishes what, and when. I also study communication, IT and design, and I make my own visuals and build my own websites, this one included.</p>
+        <div class="p-actions" style="margin-top:0.4rem"><a class="p-dlbtn" href="reviews.html" style="margin-top:0">MY REVIEWS</a><a class="p-btn-ghost" href="https://techsen.dk" target="_blank" rel="noopener">VISIT TECHSEN</a></div>
+      </div>
+    </section>
+
+    <!-- ===== Photos ===== -->
+    <section class="Samiejaa-pics" aria-label="Photos">
+      <div class="MePic1">
+        <div class="pic-frame pic-frame--tall">
+          <img src="assets/aboutmepic2.jpg" alt="Photo of Samiejaa, number 2" loading="lazy" decoding="async">
+          <div class="pic-overlay"></div>
+        </div>
+        <div class="pic-frame pic-frame--short">
+          <img src="assets/aboutmepic.jpg" alt="Photo of Samiejaa, number 1" loading="lazy" decoding="async">
+          <div class="pic-overlay"></div>
+        </div>
+        <div class="pic-frame pic-frame--tall">
+          <img src="assets/aboutmepic3.jpg" alt="Photo of Samiejaa, number 3" loading="lazy" decoding="async">
+          <div class="pic-overlay"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Press kit link ===== -->
+    <section class="p-press-cta" aria-label="Press kit">
+      <p style="margin:0 0 0.9rem;color:var(--s-steel)">Writing about my music, or need photos, logos and cover art?</p>
+      <a href="press.html" class="cta">OPEN THE PRESS KIT</a>
+    </section>
+
+    </div>
   </main>
 
   <footer class="social-footer">
-    <a href="https://www.tiktok.com/@samiejaa4life" target="_blank"><i class="fab fa-tiktok"></i></a>
-    <a href="https://www.instagram.com/samiejaa.makesmusic" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.youtube.com/@samiejaa" target="_blank"><i class="fab fa-youtube"></i></a>
-    <a href="https://open.spotify.com/artist/6hWIpKW9JVwSA25vYeVZKI" target="_blank"><i class="fab fa-spotify"></i></a>
-    <a href="https://twitch.tv/samiejaa" target="_blank"><i class="fab fa-twitch"></i></a>
-    <a href="https://discord.gg/7ShRn4pmN5" target="_blank"><i class="fab fa-discord"></i></a>
-  </footer>  
+    <a href="https://www.tiktok.com/@samiejaa.makesmusic" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    <a href="https://www.instagram.com/samiejaa.makesmusic" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.youtube.com/@samiejaa" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    <a href="https://open.spotify.com/artist/6hWIpKW9JVwSA25vYeVZKI" target="_blank" rel="noopener" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+    <a href="https://twitch.tv/samiejaa" target="_blank" rel="noopener" aria-label="Twitch"><i class="fab fa-twitch"></i></a>
+    <a href="https://discord.gg/7ShRn4pmN5" target="_blank" rel="noopener" aria-label="Discord"><i class="fab fa-discord"></i></a>
+  </footer>
 
   <div class="copyright">
-    © 2025 SAMIEJAA. All rights reserved.
-  </div>  
+    © 2026 SAMIEJAA. All rights reserved.
+  </div>
 
   <script src="script.js"></script>
-
-<script>
-  window.addEventListener("load", function () {
-    const loader = document.getElementById("loading-screen");
-    loader.style.opacity = "0";
-    setTimeout(() => loader.style.display = "none", 800);
-  });
-</script>
+  <script>
+    function hideLoader() {
+      const loader = document.getElementById("loading-screen");
+      if (!loader) return;
+      loader.style.opacity = "0";
+      setTimeout(() => loader.style.display = "none", 800);
+    }
+    window.addEventListener("load", hideLoader);
+    setTimeout(hideLoader, 2500);   // never let the loader block the page
+  </script>
 
 </body>
 </html>
